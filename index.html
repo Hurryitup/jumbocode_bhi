@@ -6,28 +6,105 @@
         <body>
                 <div id="map">
                         <script type="text/javascript">
+
+
                                 var map;
                                 function initMap() {
+                                        var styles = [
+                                            {
+                                              stylers: [
+                                                { hue: "#004488" },
+                                                // { saturation: 0 },
+                                              ]
+                                            },{
+                                              featureType: "road",
+                                              elementType: "geometry",
+                                              stylers: [
+                                                { color: "#ffffff" },
+                                                // { lightness: -50 },
+                                                // { saturation: -100 },
+                                                // { visibility: "simplified" }
+                                              ]
+                                            },{
+                                              featureType: "road",
+                                              elementType: "labels",
+                                              stylers: [
+                                                { visibility: "off" }
+                                              ]
+                                            },{
+                                              featureType: "landscape",
+                                              elementType: "geometry",
+                                              stylers: [
+                                                { color: "#468a24" },
+                                                // { lightness: -75 },
+                                                // { saturation: -30 },
+                                                // { visibility: "simplified" }
+                                              ]
+                                            },{
+                                              featureType: "poi",
+                                              elementType: "geometry",
+                                              stylers: [
+                                                { color: "#68ac46" },
+                                                // { lightness: -75 },
+                                                // { saturation: -30 },
+                                                // { visibility: "simplified" }
+                                              ]
+                                            },{
+                                              featureType: "water",
+                                              elementType: "geometry",
+                                              stylers: [
+                                                { hue: "#002244" },
+                                                { lightness: -75 },
+                                                { saturation: -30 },
+                                                // { visibility: "simplified" }
+                                              ]
+                                            },{
+                                              // featureType: "poi",
+                                              elementType: "labels.text.stroke",
+                                              stylers: [
+                                                { color: "#000000" },
+                                                // { lightness: -75 },
+                                                // { saturation: -30 },
+                                                // { visibility: "simplified" }
+                                              ],
+                                            },{
+                                              // featureType: "poi",
+                                              elementType: "labels.text.fill",
+                                              stylers: [
+                                                { color: "#ffffff" },
+                                                // { lightness: -75 },
+                                                // { saturation: -30 },
+                                                // { visibility: "simplified" }
+                                              ],
+                                            }
+                                          ];
+
+                                        var styledMap = new google.maps.StyledMapType(styles, {name: "Styled Map"});
+
                                         var mapOptions =  {
                                                         zoom: 12,
                                                         center: {lat: -28.643387, lng: 153.612224},
                                                         mapTypeControl: true,
                                                         mapTypeControlOptions: {
-                                                                style: google.maps.MapTypeControlStyle.HORIZONTAL_BAR,
-                                                                position: google.maps.ControlPosition.TOP_CENTER
+                                                                style: google.maps.MapTypeControlStyle.DROPDOWN_MENU,
+                                                                position: google.maps.ControlPosition.TOP_RIGHT,
+                                                                mapTypeIds: [google.maps.MapTypeId.HYBRID, 'map_style']
                                                         },
                                                         zoomControl: true,
                                                         zoomControlOptions: {
-                                                                position: google.maps.ControlPosition.LEFT_CENTER
+                                                                position: google.maps.ControlPosition.TOP_LEFT,
                                                         },
                                                         scaleControl: true,
-                                                        streetViewControl: true,
-                                                        streetViewControlOptions: {
-                                                                position: google.maps.ControlPosition.LEFT_TOP
-                                                        },
-                                                        fullscreenControl: true
+                                                        streetViewControl: false,
+                                                        // streetViewControlOptions: {
+                                                        //         position: google.maps.ControlPosition.LEFT_TOP
+                                                        // },
+                                                        // fullscreenControl: true
                                                 }
                                         map = new google.maps.Map(document.getElementById('map'), mapOptions);
+
+                                        map.mapTypes.set('map_style', styledMap);
+                                        map.setMapTypeId('map_style');
                                 }
                         </script>
                 </div>
