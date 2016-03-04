@@ -2,9 +2,55 @@
 <html>
         <head>
                 <link rel="stylesheet" type="text/css" href="default_style.css">
+                <!-- Latest compiled and minified CSS -->
+                <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+
+                <!-- jQuery library -->
+                <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+
+                <!-- Latest compiled JavaScript -->
+                <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
         </head>
         <body>
-                <div id="map">
+                <div class="container-fluid">
+                        <div class="row">
+                                <div class="col-sm-3" >
+                                        <h1>My Itinerary</h1>
+                                        <p>Start:
+                                </div>
+
+                                <div class="col-sm-9" style="background-color:lavenderblush;">.col-sm-9 (map)</div>
+                        </div>
+                </div>
+                <!--<p class="text-xs-left">
+
+
+                        <h1>My Itinerary</h1>
+                        <div class="dropdown">
+                                <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">
+                                <span class="caret"></span></button>
+                                <ul class="dropdown-menu">
+                                        <li><a href="#">My Current Location</a></li>
+                                        <li><a href="#">Boston</a></li>
+                                        <li><a href="#">Hull</a></li>
+                                        <li><a href="#">Hingham</a></li>
+                                </ul>
+                        </div>
+                </p>
+                <div class="container">-->
+                <div class="btn-group">
+                        <button data-toggle="dropdown" class="btn btn-inverse dropdown-toggle">Inverse <span class="caret"></span></button>
+                        <ul class="dropdown-menu">
+                                <li><input type="text" class="typeahead"></li>    
+                                <li><a class="hc" href="#">Action</a></li>
+                                <li><a class="hc" href="#">Another action</a></li>
+                                <li><a class="hc" href="#">Something else here</a></li>
+                                <li class="divider"></li>
+                                <li><a class="hc" href="http://www.stackoverflow.com/">Stackoverflow.com</a></li>
+                        </ul>
+                </div>
+
+                <!--<div id="map">
                         <script type="text/javascript">
                                 var map;
                                 function initMap() {
@@ -30,7 +76,7 @@
                                         map = new google.maps.Map(document.getElementById('map'), mapOptions);
                                 }
                         </script>
-                </div>
+                </div> -->
 
                 <script async defer
                         src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBOccCom-vEeFD7ox9GjEqawE_YSDww6vE&callback=initMap">
