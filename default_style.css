@@ -5,6 +5,19 @@ html, body {
 }
 
 #map {
-        height: 50%;
-        width:50%;
+        height: 60%;
+        width:72%;
+        margin-left: 25%;
+       	margin-right: 3%;
+       	margin-top: 3%;
+}
+
+.map_title { 
+	margin-left: 2.5%;
+	font-size: 35px;
+}
+
+.start {
+	margin-left: 2%;
+	font-size: 20px;
 }
