@@ -81,53 +81,63 @@ html, body {
   }
 }
 
-
 @media all and (min-width: 640px) {
   .title {
-    margin-left: 10px;
-    display: inline-block;
+    margin-left: 55px;
     position: absolute;
-    font-size: 200%;
+    font-size: 215%;
   }
 
   .start {
     margin-left: 10px;
-    display:inline-block;
     position: absolute;
-    margin-top: 45px;
+    margin-top: 55px;
     font-size: 150%;
   }
 
   .btn-group {
     margin-left: 75px;
-    display: inline-block;
     position: absolute;
-    margin-top: 45px;
+    margin-top: 55px;
+  }
+  .plan_trip {
+    margin-left: 60px;
+    position: absolute;
+    margin-top: 15px;
+    font-size: 150%;
+    text-decoration: underline;
   }
 }
 
 @media all and (max-width: 640px) {
   .title {
-    margin-left: 10px;
-    display: inline-block;
+    margin-left: 55px;
     position: absolute;
-    font-size: 200%;
+    font-size: 215%;
   }
 
   .start {
     margin-left: 10px;
-    display:inline-block;
     position: absolute;
-    margin-top: 45px;
+    margin-top: 55px;
     font-size: 150%;
   }
   .btn-group {
     margin-left: 75px;
-    display: inline-block;
     position: absolute;
-    margin-top: 45px;
+    margin-top: 55px;
+  }
+  .plan_trip {
+    margin-left: 60px;
+    position: absolute;
+    margin-top: 15px;
+    font-size: 150%;
+    text-decoration: underline;
   }
 }
 
+.dropdown {
+  color: white;
+}
 
 
