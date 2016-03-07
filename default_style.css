@@ -4,20 +4,52 @@ html, body {
         padding: 0;
 }
 
-#map {
+/* @media all and (min-width: 480px) { */
+  #map {
         height: 60%;
-        width:72%;
-        margin-left: 25%;
+        width:68%;
+        margin-left: 30%;
        	margin-right: 3%;
        	margin-top: 3%;
-}
+       /* float: right; */
+        display: inline-block;
+        position: absolute;
+  }
+/*} 
 
+/*
+@media all and (max-width: 480px) {
+  #map {
+        height: 60%;
+        width:94%;
+        margin-left: 3%;
+        margin-right: 3%;
+        margin-top: 3%;
+  }
+} */
+
+/*
 .map_title { 
-	margin-left: 2.5%;
-	font-size: 35px;
+	margin-left: 3%;
+	font-size: 200%;
+  position: absolute;
+  height: 10%;
+  width: 25%;
+
 }
 
 .start {
-	margin-left: 2%;
+  margin-top: 15%;
+  margin-left: 3%;
 	font-size: 20px;
+  position: absolute;
+  width: 25%;
+}
+*/
+
+p {
+  margin-left: 3%;
+  display: inline-block;
+  position: absolute;
+  width: 25%;
 }
