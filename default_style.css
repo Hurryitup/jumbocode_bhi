@@ -12,3 +12,7 @@ html, body {
 .dropdown {
 	color: white;
 }
+
+.col-sm-3 {
+	text-align: center;
+}
