@@ -4,52 +4,130 @@ html, body {
         padding: 0;
 }
 
-/* @media all and (min-width: 480px) { */
+@media all and (min-width: 1200px) {
+  #map {
+    height: 60%;
+    width: 74%;
+    margin-left: 2%;
+    margin-right: 2%;
+    margin-top: 20px;
+    float: right;
+  }
+}
+
+@media all and (max-width: 1200px) {
   #map {
         height: 60%;
-        width:68%;
-        margin-left: 30%;
-       	margin-right: 3%;
-       	margin-top: 3%;
-       /* float: right; */
-        display: inline-block;
-        position: absolute;
+        width:70%;
+        margin-left: 2%;
+       	margin-right: 2%;
+       	margin-top: 20px;
+        float: right;
   }
-/*} 
+} 
 
-/*
-@media all and (max-width: 480px) {
+@media all and (max-width: 1005px) {
   #map {
         height: 60%;
-        width:94%;
-        margin-left: 3%;
-        margin-right: 3%;
-        margin-top: 3%;
+        width: 67%;
+        margin-left: 2%;
+        margin-right: 2%;
+        margin-top: 20px;
+        float: right;
   }
-} */
-
-/*
-.map_title { 
-	margin-left: 3%;
-	font-size: 200%;
-  position: absolute;
-  height: 10%;
-  width: 25%;
-
 }
 
-.start {
-  margin-top: 15%;
-  margin-left: 3%;
-	font-size: 20px;
-  position: absolute;
-  width: 25%;
+@media all and (max-width: 900px) {
+  #map {
+        height: 60%;
+        width: 64%;
+        margin-left: 2%;
+        margin-right: 2%;
+        margin-top: 20px;
+        float: right;
+  }
 }
-*/
 
-p {
-  margin-left: 3%;
-  display: inline-block;
-  position: absolute;
-  width: 25%;
+@media all and (max-width: 835px) {
+  #map {
+        height: 60%;
+        width: 60%;
+        margin-left: 2%;
+        margin-right: 2%;
+        margin-top: 20px;
+        float: right;
+  }
 }
+
+@media all and (max-width: 750px) {
+  #map {
+        height: 60%;
+        width: 55%;
+        margin-left: 2%;
+        margin-right: 2%;
+        margin-top: 20px;
+        float: right;
+  }
+}
+
+@media all and (max-width: 640px) {
+  #map {
+        height: 60%;
+        width:96%;
+        margin-left: 2%;
+        margin-right: 2%;
+        margin-top: 300px;
+        float: left;
+  }
+}
+
+
+@media all and (min-width: 640px) {
+  .title {
+    margin-left: 10px;
+    display: inline-block;
+    position: absolute;
+    font-size: 200%;
+  }
+
+  .start {
+    margin-left: 10px;
+    display:inline-block;
+    position: absolute;
+    margin-top: 45px;
+    font-size: 150%;
+  }
+
+  .btn-group {
+    margin-left: 75px;
+    display: inline-block;
+    position: absolute;
+    margin-top: 45px;
+  }
+}
+
+@media all and (max-width: 640px) {
+  .title {
+    margin-left: 10px;
+    display: inline-block;
+    position: absolute;
+    font-size: 200%;
+  }
+
+  .start {
+    margin-left: 10px;
+    display:inline-block;
+    position: absolute;
+    margin-top: 45px;
+    font-size: 150%;
+  }
+  .btn-group {
+    margin-left: 75px;
+    display: inline-block;
+    position: absolute;
+    margin-top: 45px;
+  }
+}
+
+
+

@@ -9,10 +9,17 @@
                 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
         </head>
         <body>
-                <p>
-                        <font size="6"> My itinerary </font> <br>
-                        <font size="3"> Start: </font>
-                </p>
+                <div class="title"> My itinerary </div>
+                <div class= "start"> Start: </div>
+                <div class="btn-group"> 
+                        <button data-toggle="dropdown" class="btn btn-inverse dropdown-toggle"><input type="text" class="typeahead"><span class="caret"></span> </button>
+                                <ul class="dropdown-menu">
+                                        <li><input type="text" class="typeahead"></li>    
+                                        <li><a class="hc" href="#">Boston</a></li>
+                                        <li><a class="hc" href="#">Hull</a></li>
+                                        <li><a class="hc" href="#">Hingham</a></li>
+                                </ul>
+                </div>
 
                 <div id="map">
                         <script type="text/javascript">
