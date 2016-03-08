@@ -16,7 +16,7 @@
                 <div class="title"> My itinerary </div>
                 <div class= "start"> Start: </div>
                 <div class="btn-group1"> 
-                        <button data-toggle="dropdown" class="btn btn-inverse dropdown-toggle"><input type="text" class="typeahead"><span class="caret"></span> </button>
+                        <button data-toggle="dropdown" class="btn btn-inverse dropdown-toggle">Enter Starting Point<span class="caret"></span> </button>
                         <ul class="dropdown-menu">
                                 <li><input type="text" class="typeahead"></li>    
                                 <li><a class="hc" href="#">Boston</a></li>
@@ -40,7 +40,7 @@
 
                 <div class= "finish"> Finish: </div>
                 <div class="btn-group3"> 
-                        <button data-toggle="dropdown" class="btn btn-inverse dropdown-toggle"><input type="text" class="typeahead"><span class="caret"></span> </button>
+                        <button data-toggle="dropdown" class="btn btn-inverse dropdown-toggle">Enter Finish Point<span class="caret"></span> </button>
                         <ul class="dropdown-menu">
                                 <li><input type="text" class="typeahead"></li>    
                                 <li><a class="hc" href="#">Boston</a></li>
@@ -54,8 +54,8 @@
                                 var map;
                                 function initMap() {
                                         var mapOptions =  {
-                                                        zoom: 12,
-                                                        center: {lat: -28.643387, lng: 153.612224},
+                                                        zoom: 11,
+                                                        center: {lat: 42.3117, lng: -70.9864},
                                                         mapTypeControl: true,
                                                         mapTypeControlOptions: {
                                                                 style: google.maps.MapTypeControlStyle.HORIZONTAL_BAR,
