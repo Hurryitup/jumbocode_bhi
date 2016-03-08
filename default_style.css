@@ -1,1 +1,180 @@
+html, body {
+        height:100%;
+        margin: 0;
+        padding: 0;
+}
 
+@media all and (min-width: 1200px) {
+  #map {
+    height: 60%;
+    width: 74%;
+    margin-left: 2%;
+    margin-right: 2%;
+    margin-top: 20px;
+    float: right;
+  }
+}
+
+@media all and (max-width: 1200px) {
+  #map {
+        height: 60%;
+        width:70%;
+        margin-left: 2%;
+       	margin-right: 2%;
+       	margin-top: 20px;
+        float: right;
+  }
+} 
+
+@media all and (max-width: 1005px) {
+  #map {
+        height: 60%;
+        width: 67%;
+        margin-left: 2%;
+        margin-right: 2%;
+        margin-top: 20px;
+        float: right;
+  }
+}
+
+@media all and (max-width: 900px) {
+  #map {
+        height: 60%;
+        width: 64%;
+        margin-left: 2%;
+        margin-right: 2%;
+        margin-top: 20px;
+        float: right;
+  }
+}
+
+@media all and (max-width: 835px) {
+  #map {
+        height: 60%;
+        width: 60%;
+        margin-left: 2%;
+        margin-right: 2%;
+        margin-top: 20px;
+        float: right;
+  }
+}
+
+@media all and (max-width: 750px) {
+  #map {
+        height: 60%;
+        width: 55%;
+        margin-left: 2%;
+        margin-right: 2%;
+        margin-top: 20px;
+        float: right;
+  }
+}
+
+@media all and (max-width: 640px) {
+  #map {
+        height: 60%;
+        width:96%;
+        margin-left: 2%;
+        margin-right: 2%;
+        margin-top: 300px;
+        float: left;
+  }
+}
+
+@media all and (min-width: 640px) {
+  .title {
+    margin-left: 55px;
+    position: absolute;
+    font-size: 215%;
+  }
+
+  .start {
+    margin-left: 10px;
+    position: absolute;
+    margin-top: 55px;
+    font-size: 150%;
+  }
+
+  .btn-group1 {
+    margin-left: 75px;
+    position: absolute;
+    margin-top: 55px;
+  }
+  .plan_trip {
+    margin-left: 60px;
+    position: absolute;
+    margin-top: 105px;
+    font-size: 150%;
+    text-decoration: underline;
+  }
+
+  .btn-group2 {
+    position: absolute;
+    margin-top: 150px;
+    margin-left: 20px;
+  }
+
+  .finish {
+    margin-left: 10px;
+    position: absolute;
+    margin-top: 250px;
+    font-size: 150%;
+  }
+
+  .btn-group3 {
+    margin-left: 75px;
+    position: absolute;
+    margin-top: 250px;
+  }
+}
+
+@media all and (max-width: 640px) {
+  .title {
+    margin-left: 55px;
+    position: absolute;
+    font-size: 215%;
+  }
+
+  .start {
+    margin-left: 10px;
+    position: absolute;
+    margin-top: 55px;
+    font-size: 150%;
+  }
+
+  .btn-group1 {
+    margin-left: 75px;
+    position: absolute;
+    margin-top: 55px;
+  }
+  .plan_trip {
+    margin-left: 60px;
+    position: absolute;
+    margin-top: 105px;
+    font-size: 150%;
+    text-decoration: underline;
+  }
+
+  .btn-group2 {
+    position: absolute;
+    margin-top: 150px;
+    margin-left: 20px;
+  }
+
+  .finish {
+    margin-left: 10px;
+    position: absolute;
+    margin-top: 250px;
+    font-size: 150%;
+  }
+
+  .btn-group3 {
+    margin-left: 75px;
+    position: absolute;
+    margin-top: 250px;
+  }
+}
+
+.dropdown {
+  color: white;
+}
