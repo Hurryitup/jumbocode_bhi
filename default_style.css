@@ -2,7 +2,7 @@ html, body {
         height:100%;
         margin: 0;
         padding: 0;
-	background-color: lightblue;
+	background-color: #ff0000;
 }
 
 @media all and (min-width: 1200px) {
@@ -128,7 +128,7 @@ html, body {
     margin-top: 250px;
   }
   .buy_tix {
-    margin-left: 110px;
+    margin-left: 100px;
     position: absolute;
     margin-top: 350px;
   }
@@ -181,7 +181,7 @@ html, body {
   }
 
   .buy_tix {
-    margin-left: 110px;
+    margin-left: 100px;
     position: absolute;
     margin-top: 350px;
   }
