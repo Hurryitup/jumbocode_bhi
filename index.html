@@ -2,7 +2,8 @@
 <html>
         <head>
                 <link rel="stylesheet" type="text/css" href="default_style.css">
-                <!-- Latest compiled and minified CSS -->
+
+                 <!-- Latest compiled and minified CSS -->
                 <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
 
                 <!-- jQuery library -->
@@ -10,77 +11,88 @@
 
                 <!-- Latest compiled JavaScript -->
                 <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+                <link href="http://fonts.googleapis.com/css?family=Lobster+Two" rel="stylesheet" type="text/css">
+
+                <link href="http://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" type="text/css">
+
+                <meta charset="utf-8">
+                  <link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+                 <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+                 <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.9/jquery-ui.js"></script>
+                  <link rel="stylesheet" href="/resources/demos/style.css">
+                  <script>
+                  $(function() {
+                    $( "#datepicker" ).datepicker();
+                  });
+                  </script>
         </head>
         <body>
-                <div class="container-fluid">
-                        <div class="row">
-                                <div class="col-sm-3" >
-                                        <h1>My Itinerary</h1>
-                                        Start:
-                                        <div class="btn-group"> 
-                                                <button data-toggle="dropdown" class="btn btn-inverse dropdown-toggle">Choose your starting point  <span class="caret"></span> </button>
-                                                <ul class="dropdown-menu">
-                                                        <li><input type="text" class="typeahead"></li>    
-                                                        <li><a class="hc" href="#">Boston</a></li>
-                                                        <li><a class="hc" href="#">Hull</a></li>
-                                                        <li><a class="hc" href="#">Hingham</a></li>
-                                                </ul>
-                                        </div> 
-                                        <h3>Plan Your Trip</h3>
-                                        <div class="btn-group"> 
-                                                <button type="button" class="btn btn-default">+</button>
-                                                <button data-toggle="dropdown" class="btn btn-inverse dropdown-toggle">add an island  <span class="caret"></span> </button>
-                                                <ul class="dropdown-menu">    
-                                                        <li><a class="hc" href="#">Boston</a></li>
-                                                        <li><a class="hc" href="#">Hull</a></li>
-                                                        <li><a class="hc" href="#">Hingham</a></li>
-                                                </ul>
-                                        </div> 
-                                        <h3>Choose a date</h3>
-                                    </div>
-                                          
-
-                                <div class="col-sm-9" style="background-color:lavenderblush;">.col-sm-9 (map)</div>
-
-                        </div>
+                <img src="boat.png" alt="Boat Glif" style="width:60px;height:60px;">
+                <div class="title"> My itinerary </div>
+                <div class= "start"> Start: </div>
+                <div class="btn-group1"> 
+                        <button data-toggle="dropdown" class="btn dropdown-toggle">Enter Starting Point<span class="caret"></span> </button>
+                        <ul class="dropdown-menu">
+                                <li><input type="text" class="typeahead"></li>    
+                                <li><a class="hc" href="#">Boston</a></li>
+                                <li><a class="hc" href="#">Hull</a></li>
+                                <li><a class="hc" href="#">Hingham</a></li>
+                        </ul>
                 </div>
-                <!--<div class="input-append btn-group">
-    <input class="span2" id="appendedInputButton" size="16" type="text">
-    <a class="btn btn-primary dropdown-toggle" data-toggle="dropdown" href="#">
-        <span class="caret"></span>
-    </a>
-    <ul class="dropdown-menu">
-        <li><a href="#"><i class="icon-pencil"></i> Edit</a></li>
-        <li><a href="#"><i class="icon-trash"></i> Delete</a></li>
-        <li><a href="#"><i class="icon-ban-circle"></i> Ban</a></li>
-        <li class="divider"></li>
-        <li><a href="#"><i class="i"></i> Make admin</a></li>
-    </ul>
-</div>-->
-                <!--<p class="text-xs-left">
 
+                <div class="plan_trip"> Plan Your Trip </div>
+                <div class="btn-group2"> 
+                        <button type="button" class="btn btn-default"><b>+</button>
+                        <button data-toggle="dropdown" class="btn dropdown-toggle">island<span class="caret"></span> </button>
+                        <ul class="dropdown-menu">    
+                                <li><a class="hc" href="#">Georges Island</a></li>
+                                <li><a class="hc" href="#">Spectacle Island</a></li>
+                                <li><a class="hc" href="#">Peddocks Island</a></li>
+                        </ul>
+                </div> 
 
-                        <h1>My Itinerary</h1>
-                        <div class="dropdown">
-                                <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">
-                                <span class="caret"></span></button>
-                                <ul class="dropdown-menu">
-                                        <li><a href="#">My Current Location</a></li>
-                                        <li><a href="#">Boston</a></li>
-                                        <li><a href="#">Hull</a></li>
-                                        <li><a href="#">Hingham</a></li>
-                                </ul>
-                        </div>
-                </p>
-                <div class="container">-->
+                <div class="btn-group3"> 
+                        <!--<button data-toggle="dropdown" class="btn dropdown-toggle">Date<span class="caret"></span> </button>
+                        <ul class="dropdown-menu">
+                                <li><input type="text" id="datepicker"></a>
+                                </li>
+                        </ul>-->
+                        <p>Date: <input type="text" id="datepicker"></p>
+                </div>
 
-                <!--<div id="map">
+                <div class="btn-group4"> 
+                        <button data-toggle="dropdown" class="btn dropdown-toggle">Time<span class="caret"></span> </button>
+                        <ul class="dropdown-menu">
+                                <li><a class="hc" href="#">10:30</a></li>
+                                <li><a class="hc" href="#">12:30</a></li>
+                        </ul>
+                </div>
+
+                <div class= "finish"> Finish: </div>
+                <div class="btn-group5"> 
+                        <button data-toggle="dropdown" class="btn dropdown-toggle">Enter Finish Point<span class="caret"></span> </button>
+                        <ul class="dropdown-menu">
+                                <li><input type="text" class="typeahead"></li>    
+                                <li><a class="hc" href="#">Boston</a></li>
+                                <li><a class="hc" href="#">Hull</a></li>
+                                <li><a class="hc" href="#">Hingham</a></li>
+                        </ul>
+                </div>
+
+                <div class="buy_tix">
+                    <a href="https://ticketing.bostonharborcruises.com/WebStore/shop/ViewItems.aspx?CG=EXCR&C=HIFFRR15FIH">
+                        <button type="button" class="btn btn-success btn-lg">Buy Tickets</button>
+                    </a>
+                </div>
+
+                <div id="map">
                         <script type="text/javascript">
                                 var map;
                                 function initMap() {
                                         var mapOptions =  {
-                                                        zoom: 12,
-                                                        center: {lat: -28.643387, lng: 153.612224},
+                                                        zoom: 11,
+                                                        center: {lat: 42.3117, lng: -70.9864},
                                                         mapTypeControl: true,
                                                         mapTypeControlOptions: {
                                                                 style: google.maps.MapTypeControlStyle.HORIZONTAL_BAR,
@@ -100,7 +112,7 @@
                                         map = new google.maps.Map(document.getElementById('map'), mapOptions);
                                 }
                         </script>
-                </div> -->
+                </div>
 
                 <script async defer
                         src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBOccCom-vEeFD7ox9GjEqawE_YSDww6vE&callback=initMap">
