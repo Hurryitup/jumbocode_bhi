@@ -76,14 +76,22 @@ html, body {
         width:96%;
         margin-left: 2%;
         margin-right: 2%;
-        margin-top: 300px;
+        margin-top: 375px;
         float: left;
   }
 }
 
 @media all and (min-width: 640px) {
+  img {
+    position: absolute;
+    margin-left: 5px;
+    margin-top: 5px;
+  }
   .title {
-    margin-left: 55px;
+    margin-top: 7px;
+    font-family: 'Lobster Two';
+    color: #ED1C24;
+    margin-left: 87px;
     position: absolute;
     font-size: 215%;
   }
@@ -91,27 +99,31 @@ html, body {
   .start {
     margin-left: 10px;
     position: absolute;
-    margin-top: 55px;
+    margin-top: 65px;
     font-size: 150%;
+    font-family: 'Open Sans';
   }
 
   .btn-group1 {
     margin-left: 75px;
     position: absolute;
-    margin-top: 55px;
+    margin-top: 65px;
+    font-family: 'Open Sans';
   }
   .plan_trip {
     margin-left: 60px;
     position: absolute;
-    margin-top: 105px;
+    margin-top: 115px;
     font-size: 150%;
     text-decoration: underline;
+    font-family: 'Open Sans';
   }
 
   .btn-group2 {
     position: absolute;
-    margin-top: 150px;
+    margin-top: 155px;
     margin-left: 20px;
+    font-family: 'Open Sans';
   }
 
   .finish {
@@ -119,18 +131,35 @@ html, body {
     position: absolute;
     margin-top: 250px;
     font-size: 150%;
+    font-family: 'Open Sans';
   }
 
   .btn-group3 {
     margin-left: 80px;
     position: absolute;
     margin-top: 250px;
+    font-family: 'Open Sans';
+  }
+
+  .buy_tix {
+    margin-left: 90px;
+    position: absolute;
+    margin-top: 300px;
+    font-family: 'Open Sans';
   }
 }
 
 @media all and (max-width: 640px) {
+  img {
+    position: absolute;
+    margin-left: 5px;
+    margin-top: 5px;
+  }
   .title {
-    margin-left: 55px;
+    margin-top: 7px;
+    font-family: 'Lobster Two';
+    color: #ED1C24;
+    margin-left: 87px;
     position: absolute;
     font-size: 215%;
   }
@@ -138,27 +167,31 @@ html, body {
   .start {
     margin-left: 10px;
     position: absolute;
-    margin-top: 55px;
+    margin-top: 65px;
     font-size: 150%;
+    font-family: 'Open Sans';
   }
 
   .btn-group1 {
     margin-left: 75px;
     position: absolute;
-    margin-top: 55px;
+    margin-top: 65px;
+    font-family: 'Open Sans';
   }
   .plan_trip {
     margin-left: 60px;
     position: absolute;
-    margin-top: 105px;
+    margin-top: 115px;
     font-size: 150%;
     text-decoration: underline;
+    font-family: 'Open Sans';
   }
 
   .btn-group2 {
     position: absolute;
-    margin-top: 150px;
+    margin-top: 155px;
     margin-left: 20px;
+    font-family: 'Open Sans';
   }
 
   .finish {
@@ -166,17 +199,22 @@ html, body {
     position: absolute;
     margin-top: 250px;
     font-size: 150%;
+    font-family: 'Open Sans';
   }
 
   .btn-group3 {
-    margin-left: 75px;
+    margin-left: 80px;
     position: absolute;
     margin-top: 250px;
+    font-family: 'Open Sans';
   }
-}
 
-.dropdown {
-  color: white;
+  .buy_tix {
+    margin-left: 90px;
+    position: absolute;
+    margin-top: 300px;
+    font-family: 'Open Sans';
+  }
 }
 
 
