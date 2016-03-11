@@ -146,13 +146,25 @@ html, body {
     margin-top: 155px;
     margin-left: 135px;
     font-family: 'Open Sans';
+    width: 95px;
+    padding: 10px;
+    background-color: #99ccff;
+    border-radius: 10px;
+  }
+
+  input[id="datepicker"] {
+    width: 75px;
+  }
+
+  p {
+    color: white;
   }
 
   .btn-group4 {
     color: white;
     position: absolute;
     margin-top: 155px;
-    margin-left: 205px;
+    margin-left: 235px;
     font-family: 'Open Sans';
   }
 
@@ -207,7 +219,7 @@ html, body {
     font-family: 'Open Sans';
   }
   .plan_trip {
-    margin-left: 85px;;
+    margin-left: 85px;
     position: absolute;
     margin-top: 115px;
     font-size: 150%;
@@ -232,6 +244,34 @@ html, body {
   }
 
   .btn-group3 {
+    color: #99ccff;
+    position: absolute;
+    margin-top: 155px;
+    margin-left: 135px;
+    font-family: 'Open Sans';
+    width: 95px;
+    padding: 10px;
+    background-color: #99ccff;
+    border-radius: 10px;
+  }
+
+  input[id="datepicker"] {
+    width: 75px;
+  }
+
+  p {
+    color: white;
+  }
+
+  .btn-group4 {
+    color: white;
+    position: absolute;
+    margin-top: 155px;
+    margin-left: 235px;
+    font-family: 'Open Sans';
+  }
+
+  .btn-group5 {
     color: white;
     margin-left: 80px;
     position: absolute;
@@ -244,10 +284,5 @@ html, body {
     position: absolute;
     margin-top: 300px;
     font-family: 'Open Sans';
-  }
-
-  #datepicker {
-    background-color: #99ccff;
-    
   }
 }
