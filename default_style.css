@@ -82,6 +82,10 @@ html, body {
 }
 
 @media all and (min-width: 640px) {
+  .dropdown-toggle{
+      background-color: #99ccff;
+  }
+
   img {
     position: absolute;
     margin-left: 5px;
@@ -105,13 +109,14 @@ html, body {
   }
 
   .btn-group1 {
+    color: white;
     margin-left: 75px;
     position: absolute;
     margin-top: 65px;
     font-family: 'Open Sans';
   }
   .plan_trip {
-    margin-left: 60px;
+    margin-left: 85px;
     position: absolute;
     margin-top: 115px;
     font-size: 150%;
@@ -120,6 +125,7 @@ html, body {
   }
 
   .btn-group2 {
+    color: white;
     position: absolute;
     margin-top: 155px;
     margin-left: 20px;
@@ -135,6 +141,7 @@ html, body {
   }
 
   .btn-group3 {
+    color: white;
     margin-left: 80px;
     position: absolute;
     margin-top: 250px;
@@ -150,6 +157,10 @@ html, body {
 }
 
 @media all and (max-width: 640px) {
+  .dropdown-toggle{
+      background-color: #99ccff;
+  }
+
   img {
     position: absolute;
     margin-left: 5px;
@@ -173,13 +184,14 @@ html, body {
   }
 
   .btn-group1 {
+    color: white;
     margin-left: 75px;
     position: absolute;
     margin-top: 65px;
     font-family: 'Open Sans';
   }
   .plan_trip {
-    margin-left: 60px;
+    margin-left: 85px;;
     position: absolute;
     margin-top: 115px;
     font-size: 150%;
@@ -188,6 +200,7 @@ html, body {
   }
 
   .btn-group2 {
+    color: white;
     position: absolute;
     margin-top: 155px;
     margin-left: 20px;
@@ -203,6 +216,7 @@ html, body {
   }
 
   .btn-group3 {
+    color: white;
     margin-left: 80px;
     position: absolute;
     margin-top: 250px;
