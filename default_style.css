@@ -7,7 +7,7 @@ html, body {
 @media all and (min-width: 1200px) {
   #map {
     height: 60%;
-    width: 74%;
+    width: 70%;
     margin-left: 2%;
     margin-right: 2%;
     margin-top: 20px;
@@ -18,7 +18,7 @@ html, body {
 @media all and (max-width: 1200px) {
   #map {
         height: 60%;
-        width:70%;
+        width:67%;
         margin-left: 2%;
        	margin-right: 2%;
        	margin-top: 20px;
@@ -26,18 +26,7 @@ html, body {
   }
 } 
 
-@media all and (max-width: 1005px) {
-  #map {
-        height: 60%;
-        width: 67%;
-        margin-left: 2%;
-        margin-right: 2%;
-        margin-top: 20px;
-        float: right;
-  }
-}
-
-@media all and (max-width: 900px) {
+@media all and (max-width: 1100px) {
   #map {
         height: 60%;
         width: 64%;
@@ -48,10 +37,32 @@ html, body {
   }
 }
 
-@media all and (max-width: 835px) {
+@media all and (max-width: 1000px) {
   #map {
         height: 60%;
-        width: 60%;
+        width: 61%;
+        margin-left: 2%;
+        margin-right: 2%;
+        margin-top: 20px;
+        float: right;
+  }
+}
+
+@media all and (max-width: 900px) {
+  #map {
+        height: 60%;
+        width: 57%;
+        margin-left: 2%;
+        margin-right: 2%;
+        margin-top: 20px;
+        float: right;
+  }
+}
+
+@media all and (max-width: 800px) {
+  #map {
+        height: 60%;
+        width: 54%;
         margin-left: 2%;
         margin-right: 2%;
         margin-top: 20px;
@@ -62,7 +73,7 @@ html, body {
 @media all and (max-width: 750px) {
   #map {
         height: 60%;
-        width: 55%;
+        width: 51%;
         margin-left: 2%;
         margin-right: 2%;
         margin-top: 20px;
@@ -70,7 +81,7 @@ html, body {
   }
 }
 
-@media all and (max-width: 640px) {
+@media all and (max-width: 700px) {
   #map {
         height: 60%;
         width:96%;
@@ -88,20 +99,20 @@ html, body {
 
   img {
     position: absolute;
-    margin-left: 5px;
-    margin-top: 5px;
+    margin-left: 25px;
+    margin-top: 7px;
   }
   .title {
     margin-top: 7px;
     font-family: 'Lobster Two';
     color: #ED1C24;
-    margin-left: 87px;
+    margin-left: 110px;
     position: absolute;
     font-size: 215%;
   }
 
   .start {
-    margin-left: 10px;
+    margin-left: 30px;
     position: absolute;
     margin-top: 65px;
     font-size: 150%;
@@ -110,13 +121,14 @@ html, body {
 
   .btn-group1 {
     color: white;
-    margin-left: 75px;
+    margin-left: 97px;
     position: absolute;
     margin-top: 65px;
     font-family: 'Open Sans';
   }
+
   .plan_trip {
-    margin-left: 85px;
+    margin-left: 106px;
     position: absolute;
     margin-top: 115px;
     font-size: 150%;
@@ -128,12 +140,12 @@ html, body {
     color: white;
     position: absolute;
     margin-top: 155px;
-    margin-left: 20px;
+    margin-left: 13px;
     font-family: 'Open Sans';
   }
 
   .finish {
-    margin-left: 10px;
+    margin-left: 30px;
     position: absolute;
     margin-top: 250px;
     font-size: 150%;
@@ -144,19 +156,19 @@ html, body {
     color: #99ccff;
     position: absolute;
     margin-top: 155px;
-    margin-left: 135px;
+    margin-left: 125px;
     font-family: 'Open Sans';
-    width: 95px;
-    padding: 10px;
+    width: 128px;
+    padding: 4px;
     background-color: #99ccff;
-    border-radius: 10px;
+    border-radius: 5px;
   }
 
   input[id="datepicker"] {
-    width: 75px;
+    width: 80px;
   }
 
-  p {
+  #date {
     color: white;
   }
 
@@ -164,23 +176,26 @@ html, body {
     color: white;
     position: absolute;
     margin-top: 155px;
-    margin-left: 235px;
+    margin-left: 255px;
     font-family: 'Open Sans';
   }
 
   .btn-group5 {
     color: white;
-    margin-left: 80px;
+    margin-left: 101px;
     position: absolute;
     margin-top: 250px;
     font-family: 'Open Sans';
   }
 
   .buy_tix {
-    margin-left: 90px;
+    margin-left: 109px;
     position: absolute;
     margin-top: 300px;
     font-family: 'Open Sans';
+  }
+
+  .datepicker {
   }
 }
 
@@ -191,20 +206,20 @@ html, body {
 
   img {
     position: absolute;
-    margin-left: 5px;
-    margin-top: 5px;
+    margin-left: 25px;
+    margin-top: 7px;
   }
   .title {
     margin-top: 7px;
     font-family: 'Lobster Two';
     color: #ED1C24;
-    margin-left: 87px;
+    margin-left: 110px;
     position: absolute;
     font-size: 215%;
   }
 
   .start {
-    margin-left: 10px;
+    margin-left: 30px;
     position: absolute;
     margin-top: 65px;
     font-size: 150%;
@@ -213,13 +228,14 @@ html, body {
 
   .btn-group1 {
     color: white;
-    margin-left: 75px;
+    margin-left: 97px;
     position: absolute;
     margin-top: 65px;
     font-family: 'Open Sans';
   }
+
   .plan_trip {
-    margin-left: 85px;
+    margin-left: 106px;
     position: absolute;
     margin-top: 115px;
     font-size: 150%;
@@ -231,12 +247,12 @@ html, body {
     color: white;
     position: absolute;
     margin-top: 155px;
-    margin-left: 20px;
+    margin-left: 13px;
     font-family: 'Open Sans';
   }
 
   .finish {
-    margin-left: 10px;
+    margin-left: 30px;
     position: absolute;
     margin-top: 250px;
     font-size: 150%;
@@ -247,19 +263,19 @@ html, body {
     color: #99ccff;
     position: absolute;
     margin-top: 155px;
-    margin-left: 135px;
+    margin-left: 125px;
     font-family: 'Open Sans';
-    width: 95px;
-    padding: 10px;
+    width: 128px;
+    padding: 4px;
     background-color: #99ccff;
-    border-radius: 10px;
+    border-radius: 5px;
   }
 
   input[id="datepicker"] {
-    width: 75px;
+    width: 80px;
   }
 
-  p {
+  #date {
     color: white;
   }
 
@@ -267,22 +283,25 @@ html, body {
     color: white;
     position: absolute;
     margin-top: 155px;
-    margin-left: 235px;
+    margin-left: 255px;
     font-family: 'Open Sans';
   }
 
   .btn-group5 {
     color: white;
-    margin-left: 80px;
+    margin-left: 101px;
     position: absolute;
     margin-top: 250px;
     font-family: 'Open Sans';
   }
 
   .buy_tix {
-    margin-left: 90px;
+    margin-left: 109px;
     position: absolute;
     margin-top: 300px;
     font-family: 'Open Sans';
+  }
+
+  .datepicker {
   }
 }
