@@ -189,7 +189,7 @@ html, body {
   }
 
   .buy_tix {
-    margin-left: 40px;
+    margin-left: 30px;
     position: absolute;
     margin-top: 300px;
     font-family: 'Open Sans';
@@ -203,7 +203,7 @@ html, body {
   }
 
   .print_schedule {
-    margin-left: 180px;
+    margin-left: 160px;
     position: absolute;
     margin-top: 300px;
     font-family: 'Open Sans';
@@ -307,12 +307,23 @@ html, body {
   }
 
   .buy_tix {
-    margin-left: 109px;
+    margin-left: 30px;
     position: absolute;
     margin-top: 300px;
     font-family: 'Open Sans';
   }
 
   .datepicker {
+  }
+
+  .typeahead {
+    color: black;
+  }
+
+  .print_schedule {
+    margin-left: 160px;
+    position: absolute;
+    margin-top: 300px;
+    font-family: 'Open Sans';
   }
 }
