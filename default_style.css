@@ -189,13 +189,24 @@ html, body {
   }
 
   .buy_tix {
-    margin-left: 109px;
+    margin-left: 40px;
     position: absolute;
     margin-top: 300px;
     font-family: 'Open Sans';
   }
 
   .datepicker {
+  }
+
+  .typeahead {
+    color: black;
+  }
+
+  .print_schedule {
+    margin-left: 180px;
+    position: absolute;
+    margin-top: 300px;
+    font-family: 'Open Sans';
   }
 }
 
