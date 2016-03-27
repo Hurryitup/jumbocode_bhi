@@ -17,7 +17,7 @@ under.
     on specific random days
 -   The specific latitudes and longitudes of stops are in stops.txt
 -   Shape ids:
---  Show the actual shap of ferry trips, giving the ability of showing more than
+--  Show the actual shape of ferry trips, giving the ability of showing more than
     just straight polylines in between stops.
 
 ### Converting the csv files to json objects:
