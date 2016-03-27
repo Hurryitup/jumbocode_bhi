@@ -21,7 +21,7 @@ under.
     just straight polylines in between stops.
 
 ### Converting the csv files to json objects:
-> Each individual file can be converted to its corresponding json file using
-> csv_to_json.js, found in the parent folder of this repository. Right now, each
-> file must be done manually - soon to be expanded so that one call can do all 
-> the conversions at once.
+<p> Each individual file can be converted to its corresponding json file using
+csv_to_json.js, found in the parent folder of this repository. Right now, each
+file must be done manually - soon to be expanded so that one call can do all 
+the conversions at once. </p>
