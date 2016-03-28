@@ -15,6 +15,17 @@
                 <link href="http://fonts.googleapis.com/css?family=Lobster+Two" rel="stylesheet" type="text/css">
 
                 <link href="http://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" type="text/css">
+
+                <meta charset="utf-8">
+                  <link rel="stylesheet" href="http://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+                 <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+                 <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.9/jquery-ui.js"></script>
+                  <link rel="stylesheet" href="http://resources/demos/style.css">
+                  <script>
+                  $(function() {
+                    $( "#datepicker" ).datepicker();
+                  });
+                  </script>
         </head>
         <body>
                 <img src="boat.png" alt="Boat Glif" style="width:60px;height:60px;">
@@ -30,21 +41,39 @@
                         </ul>
                 </div>
 
+                <div class= "rem_dest">
+                    <button type="button" class="btn btn-default">-</button>
+                </div>
+
                 <div class="plan_trip"> Plan Your Trip </div>
                 <div class="btn-group2"> 
-                        <button type="button" class="btn btn-default">+</button>
-                        <button data-toggle="dropdown" class="btn dropdown-toggle">island<span class="caret"></span> </button>
+                        <button data-toggle="dropdown" class="btn dropdown-toggle">Island<span class="caret"></span> </button>
                         <ul class="dropdown-menu">    
                                 <li><a class="hc" href="#">Georges Island</a></li>
                                 <li><a class="hc" href="#">Spectacle Island</a></li>
                                 <li><a class="hc" href="#">Peddocks Island</a></li>
                         </ul>
-                        <button data-toggle="dropdown" class="btn dropdown-toggle">date<span class="caret"></span> </button>
-                        <button data-toggle="dropdown" class="btn dropdown-toggle">time<span class="caret"></span> </button>
+                </div>
+
+                <div class="btn-group3"> 
+                        <element id = "date"> Date: </element> 
+                        <input type="text" id="datepicker">
+                </div>
+
+                <div class="btn-group4"> 
+                        <button data-toggle="dropdown" class="btn dropdown-toggle">Time<span class="caret"></span> </button>
+                        <ul class="dropdown-menu">
+                                <li><a class="hc" href="#">10:30</a></li>
+                                <li><a class="hc" href="#">12:30</a></li>
+                        </ul>
+                </div>
+
+                <div class="add_dest">
+                    <button type="button" class="btn btn-default">+</button>
                 </div> 
 
                 <div class= "finish"> Finish: </div>
-                <div class="btn-group3"> 
+                <div class="btn-group5"> 
                         <button data-toggle="dropdown" class="btn dropdown-toggle">Enter Finish Point<span class="caret"></span> </button>
                         <ul class="dropdown-menu">
                                 <li><input type="text" class="typeahead"></li>    
@@ -58,6 +87,10 @@
                     <a href="https://ticketing.bostonharborcruises.com/WebStore/shop/ViewItems.aspx?CG=EXCR&C=HIFFRR15FIH">
                         <button type="button" class="btn btn-success btn-lg">Buy Tickets</button>
                     </a>
+                </div>
+
+                <div class="print_schedule">
+                        <button type="button" class="btn btn-success btn-lg">Print Schedule</button>
                 </div>
 
                 <div id="map">
