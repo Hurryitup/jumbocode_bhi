@@ -54,6 +54,16 @@
 
                             $("#Peddocks").click(function(){ stops[num_islands] = "Peddocks"; });
 
+                            $("#1030").click(function(){ time[num_islands] = "10:30"; });
+
+                            $("#1200").click(function(){ time[num_islands] = "12:00"; });
+
+                            $("#finish_man").keyup(function (e) {
+                                if (e.which == 13) {
+                                    start = $("#finish_man").val();
+                                }
+                            });
+
                             $("#end_Boston").click(function(){ finish = "Boston"; });
 
                             $("#end_Hull").click(function(){ finish = "Hull"; });
@@ -99,8 +109,10 @@
                 <div class="btn-group4"> 
                         <button data-toggle="dropdown" class="btn dropdown-toggle">Time<span class="caret"></span> </button>
                         <ul class="dropdown-menu">
-                                <li><a class="hc" href="#">10:30</a></li>
-                                <li><a class="hc" href="#">12:30</a></li>
+                                <!-- maybe have choices for every 15 minutes and only enable
+                                the ones that apply to selected island -->
+                                <li><a class="hc" id="1030">10:30</a></li>
+                                <li><a class="hc" id="1200">12:30</a></li>
                         </ul>
                 </div>
 
@@ -112,7 +124,7 @@
                 <div class="btn-group5"> 
                         <button data-toggle="dropdown" class="btn dropdown-toggle">Enter Finish Point<span class="caret"></span> </button>
                         <ul class="dropdown-menu">
-                                <li><input type="text" class="typeahead"></li>    
+                                <li><input type="text" id="finish_man" class="typeahead"></li>    
                                 <li><a class="hc" id="end_Boston">Boston</a></li>
                                 <li><a class="hc" id="end_Hull">Hull</a></li>
                                 <li><a class="hc" id="end_Hingham">Hingham</a></li>
