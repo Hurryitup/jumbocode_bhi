@@ -20,11 +20,44 @@
                   <link rel="stylesheet" href="http://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
                  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
                  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.9/jquery-ui.js"></script>
-                  <link rel="stylesheet" href="http://resources/demos/style.css">
+                  <!-- <link rel="stylesheet" href="http://resources/demos/style.css"> -->
+
+
                   <script>
-                  $(function() {
-                    $( "#datepicker" ).datepicker();
-                  });
+                        $(function() {
+                            $( "#datepicker" ).datepicker();
+                        });
+
+                        var start;
+                        var finish;
+                        var stops = [];
+                        var dates = [];
+                        var time = [];
+                        var num_islands = 0;
+
+                        $(document).ready(function(){
+                            $("#start_man").keyup(function (e) {
+                                if (e.which == 13) {
+                                    start = $("#start_man").val();
+                                }
+                            });
+
+                            $("#Boston").click(function(){
+                                start = $('#Boston').val($(this).html());
+                                start = start.selector.substr(1, start.selector.length);
+                            });
+
+                            $("#Hull").click(function(){
+                                start = $('#Hull').val($(this).html());
+                                start = start.selector.substr(1, start.selector.length);
+                            });
+
+                            $("#Hingham").click(function(){
+                                start = $('#Hingham').val($(this).html());
+                                start = start.selector.substr(1, start.selector.length);
+                            });
+
+                        });
                   </script>
         </head>
         <body>
@@ -34,10 +67,10 @@
                 <div class="btn-group1"> 
                         <button data-toggle="dropdown" class="btn dropdown-toggle">Enter Starting Point<span class="caret"></span> </button>
                         <ul class="dropdown-menu">
-                                <li><input type="text" class="typeahead"></li>    
-                                <li><a class="hc" href="#">Boston</a></li>
-                                <li><a class="hc" href="#">Hull</a></li>
-                                <li><a class="hc" href="#">Hingham</a></li>
+                                <li><input type="text" id="start_man" class="typeahead"></li>    
+                                <li><a class="hc" id= "Boston">Boston</a></li>
+                                <li><a class="hc" id= "Hull">Hull</a></li>
+                                <li><a class="hc" id= "Hingham">Hingham</a></li>
                         </ul>
                 </div>
 
