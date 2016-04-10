@@ -42,20 +42,23 @@
                                 }
                             });
 
-                            $("#Boston").click(function(){
-                                start = $('#Boston').val($(this).html());
-                                start = start.selector.substr(1, start.selector.length);
-                            });
+                            $("#start_Boston").click(function(){ start = "Boston"; });
 
-                            $("#Hull").click(function(){
-                                start = $('#Hull').val($(this).html());
-                                start = start.selector.substr(1, start.selector.length);
-                            });
+                            $("#start_Hull").click(function(){ start = "Hull"; });
 
-                            $("#Hingham").click(function(){
-                                start = $('#Hingham').val($(this).html());
-                                start = start.selector.substr(1, start.selector.length);
-                            });
+                            $("#start_Hingham").click(function(){ start = "Hingham"; });
+
+                            $("#Georges").click(function(){ stops[num_islands] = "Georges Island"; });
+
+                            $("#Spectacle").click(function(){ stops[num_islands] = "Spectacle Island"; });
+
+                            $("#Peddocks").click(function(){ stops[num_islands] = "Peddocks"; });
+
+                            $("#end_Boston").click(function(){ finish = "Boston"; });
+
+                            $("#end_Hull").click(function(){ finish = "Hull"; });
+
+                            $("#end_Hingham").click(function(){ finish = "Hingham"; });
 
                         });
                   </script>
@@ -68,9 +71,9 @@
                         <button data-toggle="dropdown" class="btn dropdown-toggle">Enter Starting Point<span class="caret"></span> </button>
                         <ul class="dropdown-menu">
                                 <li><input type="text" id="start_man" class="typeahead"></li>    
-                                <li><a class="hc" id= "Boston">Boston</a></li>
-                                <li><a class="hc" id= "Hull">Hull</a></li>
-                                <li><a class="hc" id= "Hingham">Hingham</a></li>
+                                <li><a class="hc" id="start_Boston">Boston</a></li>
+                                <li><a class="hc" id="start_Hull">Hull</a></li>
+                                <li><a class="hc" id="start_Hingham">Hingham</a></li>
                         </ul>
                 </div>
 
@@ -82,9 +85,9 @@
                 <div class="btn-group2"> 
                         <button data-toggle="dropdown" class="btn dropdown-toggle">Island<span class="caret"></span> </button>
                         <ul class="dropdown-menu">    
-                                <li><a class="hc" href="#">Georges Island</a></li>
-                                <li><a class="hc" href="#">Spectacle Island</a></li>
-                                <li><a class="hc" href="#">Peddocks Island</a></li>
+                                <li><a class="hc" id ="Georges">Georges Island</a></li>
+                                <li><a class="hc" id="Spectacle">Spectacle Island</a></li>
+                                <li><a class="hc" id="Peddocks">Peddocks Island</a></li>
                         </ul>
                 </div>
 
@@ -110,9 +113,9 @@
                         <button data-toggle="dropdown" class="btn dropdown-toggle">Enter Finish Point<span class="caret"></span> </button>
                         <ul class="dropdown-menu">
                                 <li><input type="text" class="typeahead"></li>    
-                                <li><a class="hc" href="#">Boston</a></li>
-                                <li><a class="hc" href="#">Hull</a></li>
-                                <li><a class="hc" href="#">Hingham</a></li>
+                                <li><a class="hc" id="end_Boston">Boston</a></li>
+                                <li><a class="hc" id="end_Hull">Hull</a></li>
+                                <li><a class="hc" id="end_Hingham">Hingham</a></li>
                         </ul>
                 </div>
 
