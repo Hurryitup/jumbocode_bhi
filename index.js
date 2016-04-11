@@ -1,9 +1,3 @@
-$(function() {
-        $( "#datepicker" ).datepicker();
-        $("#datepicker").change(function () {
-            dates[num_islands] = $(this).datepicker("getDate");
-		});
-});
 
 var start;
 var finish;
@@ -12,6 +6,14 @@ var dates = [];
 var time = [];
 var num_islands = 0;
 var currentDate;
+
+$(function() {
+        $( "#datepicker" ).datepicker();
+        $("#datepicker").change(function () {
+            dates[num_islands] = $(this).datepicker("getDate");
+		});
+});
+
 $(document).ready(function(){
     $("#start_man").keyup(function (e) {
         if (e.which == 13) {
