@@ -1,8 +1,14 @@
 $(function() {
-        $( "#datepicker" ).datepicker();
-        $("#datepicker").change(function () {
-            dates[num_islands] = $(this).datepicker("getDate");
-		});
+  //       $( "#datepicker" ).datepicker();
+  //       $("#datepicker").change(function () {
+  //           dates[num_islands] = $(this).datepicker("getDate");
+		// });
+        $('.datepick').each(function(){
+                $(this).datepicker();
+                $(this).change(function () {
+                        dates[num_islands] = $(this).datepicker("getDate");
+                });
+        });
 });
 
 var start;

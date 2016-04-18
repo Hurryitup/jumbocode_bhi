@@ -1,34 +1,48 @@
 html, body {
+        background-color: #f8f5ef;
         height:100%;
         margin: 0;
         padding: 0;
 }
 
-@media all and (min-width: 1200px) {
+.container-fluid {
+  padding-right: 0px;
+}
+
+#map-container {
+        padding-right: 0px;
+}
+
+#map {
+        min-height: 500px;
+}
+/*@media all and (min-width: 1200px) {
   #map {
-    height: 60%;
+    min-height: 500px;
     width: 70%;
-    margin-left: 2%;
-    margin-right: 2%;
-    margin-top: 20px;
+    display: block;
+    position: relative;
+    margin-left: 0%;
+    margin-right: 0%;
     float: right;
   }
 }
 
 @media all and (max-width: 1200px) {
   #map {
-        height: 60%;
+        min-height: 500px;
+        position: relative;
         width:67%;
+        display: block;
         margin-left: 2%;
-        margin-right: 2%;
-        margin-top: 20px;
+        margin-right: 0%;
         float: right;
   }
 } 
 
 @media all and (max-width: 1100px) {
   #map {
-        height: 60%;
+        min-height: 60%;
         width: 64%;
         margin-left: 2%;
         margin-right: 2%;
@@ -39,7 +53,7 @@ html, body {
 
 @media all and (max-width: 1000px) {
   #map {
-        height: 60%;
+        min-height: 60%;
         width: 61%;
         margin-left: 2%;
         margin-right: 2%;
@@ -50,7 +64,7 @@ html, body {
 
 @media all and (max-width: 900px) {
   #map {
-        height: 60%;
+        min-height: 60%;
         width: 57%;
         margin-left: 2%;
         margin-right: 2%;
@@ -61,7 +75,7 @@ html, body {
 
 @media all and (max-width: 800px) {
   #map {
-        height: 60%;
+        min-height: 60%;
         width: 54%;
         margin-left: 2%;
         margin-right: 2%;
@@ -72,7 +86,7 @@ html, body {
 
 @media all and (max-width: 750px) {
   #map {
-        height: 60%;
+        min-height: 60%;
         width: 51%;
         margin-left: 2%;
         margin-right: 2%;
@@ -83,82 +97,91 @@ html, body {
 
 @media all and (max-width: 700px) {
   #map {
-        height: 60%;
+        min-height: 100%;
         width:96%;
         margin-left: 2%;
         margin-right: 2%;
         margin-top: 375px;
-        float: left;
+        float: right;
   }
 }
-
-@media all and (min-width: 640px) {
+*/
+@media all and (min-width: 0px) {
   .dropdown-toggle{
       background-color: #99ccff;
   }
 
   img {
-    position: absolute;
-    margin-left: 25px;
+    /* position: absolute; */
+    margin-left: auto;
     margin-top: 7px;
   }
   .title {
     margin-top: 7px;
     font-family: 'Lobster Two';
     color: #ED1C24;
-    margin-left: 110px;
-    position: absolute;
+    margin-left: auto;
+    /* position: absolute; */
     font-size: 215%;
   }
 
   .start {
-    margin-left: 30px;
-    position: absolute;
-    margin-top: 65px;
+    margin-left: auto;
+    /* position: absolute; */
+    margin-top: auto;
     font-size: 150%;
     font-family: 'Open Sans';
   }
 
   .btn-group1 {
     color: white;
-    margin-left: 97px;
-    position: absolute;
-    margin-top: 65px;
+    margin-left: auto;
+    /* position: absolute; */
+    margin-top: auto;
     font-family: 'Open Sans';
   }
 
   .plan_trip {
-    margin-left: 106px;
-    position: absolute;
-    margin-top: 115px;
+    margin-left: auto;
+    /* position: absolute; */
+    margin-top: auto;
     font-size: 150%;
     text-decoration: underline;
     font-family: 'Open Sans';
   }
 
+  .rem_dest {
+    color: white;
+    /* position: absolute; */
+    margin-top: auto;
+    margin-left: auto;
+    font-family: 'Open Sans';
+    font-family: monospace;
+  }
+
   .btn-group2 {
     color: white;
-    position: absolute;
-    margin-top: 155px;
-    margin-left: 13px;
+    /* position: absolute; */
+    margin-top: auto;
+    margin-left: auto;
     font-family: 'Open Sans';
   }
 
   .finish {
-    margin-left: 30px;
-    position: absolute;
-    margin-top: 250px;
+    margin-left: auto;
+    /* position: absolute; */
+    margin-top: auto;
     font-size: 150%;
     font-family: 'Open Sans';
   }
 
   .btn-group3 {
     color: #99ccff;
-    position: absolute;
-    margin-top: 155px;
-    margin-left: 125px;
+    /* position: absolute; */
+    margin-top: auto;
+    margin-left: auto;
     font-family: 'Open Sans';
-    width: 128px;
+    width: 128px; 
     padding: 4px;
     background-color: #99ccff;
     border-radius: 5px;
@@ -174,28 +197,35 @@ html, body {
 
   .btn-group4 {
     color: white;
-    position: absolute;
-    margin-top: 155px;
-    margin-left: 255px;
+    /* position: absolute; */
+    margin-top: auto;
+    margin-left: auto;
     font-family: 'Open Sans';
   }
 
   .btn-group5 {
     color: white;
-    margin-left: 101px;
-    position: absolute;
-    margin-top: 250px;
+    margin-left: auto;
+    /* position: absolute; */
+    margin-top: auto;
     font-family: 'Open Sans';
+  }
+
+  .add_dest {
+    color: white;
+    /* position: absolute; */
+    margin-top: auto;
+    margin-left: auto;
+    font-family: 'Open Sans';
+    font-family: monospace;
+    /*padding: 5%;*/
   }
 
   .buy_tix {
-    margin-left: 30px;
-    position: absolute;
-    margin-top: 300px;
+    margin-left: auto;
+    /* position: absolute; */
+    margin-top: auto;
     font-family: 'Open Sans';
-  }
-
-  .datepicker {
   }
 
   .typeahead {
@@ -203,127 +233,9 @@ html, body {
   }
 
   .print_schedule {
-    margin-left: 160px;
-    position: absolute;
-    margin-top: 300px;
-    font-family: 'Open Sans';
-  }
-}
-
-@media all and (max-width: 640px) {
-  .dropdown-toggle{
-      background-color: #99ccff;
-  }
-
-  img {
-    position: absolute;
-    margin-left: 25px;
-    margin-top: 7px;
-  }
-  .title {
-    margin-top: 7px;
-    font-family: 'Lobster Two';
-    color: #ED1C24;
-    margin-left: 110px;
-    position: absolute;
-    font-size: 215%;
-  }
-
-  .start {
-    margin-left: 30px;
-    position: absolute;
-    margin-top: 65px;
-    font-size: 150%;
-    font-family: 'Open Sans';
-  }
-
-  .btn-group1 {
-    color: white;
-    margin-left: 97px;
-    position: absolute;
-    margin-top: 65px;
-    font-family: 'Open Sans';
-  }
-
-  .plan_trip {
-    margin-left: 106px;
-    position: absolute;
-    margin-top: 115px;
-    font-size: 150%;
-    text-decoration: underline;
-    font-family: 'Open Sans';
-  }
-
-  .btn-group2 {
-    color: white;
-    position: absolute;
-    margin-top: 155px;
-    margin-left: 13px;
-    font-family: 'Open Sans';
-  }
-
-  .finish {
-    margin-left: 30px;
-    position: absolute;
-    margin-top: 250px;
-    font-size: 150%;
-    font-family: 'Open Sans';
-  }
-
-  .btn-group3 {
-    color: #99ccff;
-    position: absolute;
-    margin-top: 155px;
-    margin-left: 125px;
-    font-family: 'Open Sans';
-    width: 128px;
-    padding: 4px;
-    background-color: #99ccff;
-    border-radius: 5px;
-  }
-
-  input[id="datepicker"] {
-    width: 80px;
-  }
-
-  #date {
-    color: white;
-  }
-
-  .btn-group4 {
-    color: white;
-    position: absolute;
-    margin-top: 155px;
-    margin-left: 255px;
-    font-family: 'Open Sans';
-  }
-
-  .btn-group5 {
-    color: white;
-    margin-left: 101px;
-    position: absolute;
-    margin-top: 250px;
-    font-family: 'Open Sans';
-  }
-
-  .buy_tix {
-    margin-left: 30px;
-    position: absolute;
-    margin-top: 300px;
-    font-family: 'Open Sans';
-  }
-
-  .datepicker {
-  }
-
-  .typeahead {
-    color: black;
-  }
-
-  .print_schedule {
-    margin-left: 160px;
-    position: absolute;
-    margin-top: 300px;
+    margin-left: auto;
+    /* position: absolute; */
+    margin-top: auto;
     font-family: 'Open Sans';
   }
 }
