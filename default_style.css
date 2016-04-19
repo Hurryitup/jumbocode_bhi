@@ -1,9 +1,10 @@
 html, body {
-        background-color: #0000000;
         height:100%;
         margin: 0;
         padding: 0;
 }
+
+body {background-color: #f7f79c !important; }
 
 .container-fluid {
   padding-right: 0px;
@@ -108,11 +109,10 @@ html, body {
 */
 @media all and (min-width: 0px) {
   .dropdown-toggle{
-      background-color: #99ccff;
+      background-color: #fa9e25;
   }
 
   img {
-    /* position: absolute; */
     margin-left: auto;
     margin-top: 7px;
   }
@@ -121,38 +121,34 @@ html, body {
     font-family: 'Lobster Two';
     color: #ED1C24;
     margin-left: auto;
-    /* position: absolute; */
     font-size: 215%;
   }
 
   .start {
     margin-left: auto;
-    /* position: absolute; */
     margin-top: auto;
-    font-size: 150%;
+    font-size: 130%;
     font-family: 'Open Sans';
+    /*font-weight: bold;*/
   }
 
   .btn-group1 {
     color: white;
     margin-left: auto;
-    /* position: absolute; */
     margin-top: auto;
     font-family: 'Open Sans';
   }
 
   .plan_trip {
     margin-left: auto;
-    /* position: absolute; */
     margin-top: auto;
-    font-size: 150%;
-    text-decoration: underline;
+    font-size: 130%;
+    font-weight: bold;
     font-family: 'Open Sans';
   }
 
   .rem_dest {
     color: white;
-    /* position: absolute; */
     margin-top: auto;
     margin-left: auto;
     font-family: 'Open Sans';
@@ -161,34 +157,33 @@ html, body {
 
   .btn-group2 {
     color: white;
-    /* position: absolute; */
     margin-top: auto;
     margin-left: auto;
     font-family: 'Open Sans';
+    width: 120px; 
   }
 
   .finish {
     margin-left: auto;
-    /* position: absolute; */
     margin-top: auto;
-    font-size: 150%;
+    font-size: 130%;
     font-family: 'Open Sans';
+    /*font-weight: bold; */
   }
 
   .btn-group3 {
     color: #99ccff;
-    /* position: absolute; */
     margin-top: auto;
     margin-left: auto;
     font-family: 'Open Sans';
-    width: 128px; 
+    width: 160px; 
     padding: 4px;
-    background-color: #99ccff;
+    background-color: #fa9e25;
     border-radius: 5px;
   }
 
   input[id="datepicker"] {
-    width: 80px;
+    width: 110px;
   }
 
   #date {
@@ -197,45 +192,51 @@ html, body {
 
   .btn-group4 {
     color: white;
-    /* position: absolute; */
     margin-top: auto;
     margin-left: auto;
     font-family: 'Open Sans';
+    width: 2px;
   }
 
   .btn-group5 {
     color: white;
     margin-left: auto;
-    /* position: absolute; */
     margin-top: auto;
     font-family: 'Open Sans';
   }
 
   .add_dest {
     color: white;
-    /* position: absolute; */
     margin-top: auto;
     margin-left: auto;
-    font-family: 'Open Sans';
+    /*font-family: 'Open Sans'; */
     font-family: monospace;
-    /*padding: 5%;*/
+    font-size: 150%;
   }
+ /* .btn-success {
+    color: #ffffff;
+    background: #ED1C24;
+    } */
 
-  .buy_tix {
+  #buy {
     margin-left: auto;
-    /* position: absolute; */
     margin-top: auto;
     font-family: 'Open Sans';
-  }
+    }
+  #buy {
+    color: #ED1C24 !important; 
+    }
 
   .typeahead {
     color: black;
   }
 
-  .print_schedule {
+  #print {
     margin-left: auto;
-    /* position: absolute; */
     margin-top: auto;
     font-family: 'Open Sans';
-  }
-}
+    }
+  #buy {
+    color: #ED1C24 !important;
+    }
+
