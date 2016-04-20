@@ -28,99 +28,146 @@
                   </script>
         </head>
         <body>
-            <div class="container-fluid">
-                <div class="row">
-                    <div class="col-sm-3"  style="text-align:center">
-                        <img src="boat.png" alt="Boat Glif" style="width:60px;height:60px;">
-                        <div class="title"> My itinerary </div>
-                        </br>
-                        <div class= "start"> Start: </div>
-                        <div class="btn-group1"> 
-                            <button data-toggle="dropdown" class="btn dropdown-toggle">Enter Starting Point<span class="caret"></span> </button>
-                            <ul class="dropdown-menu">
-                                    <li><input type="text" class="typeahead"></li>    
-                                    <li><a class="hc" href="#">Boston</a></li>
-                                    <li><a class="hc" href="#">Hull</a></li>
-                                    <li><a class="hc" href="#">Hingham</a></li>
-                            </ul>
-                        </div>
-                        </br>
-                        <div class= "rem_dest">
-                            <button type="button" class="btn btn-default">-</button>
-                        </div>
-                        <div class="plan_trip"> Plan Your Trip </div>
-                        <div class="btn-group2"> 
-                            <button data-toggle="dropdown" class="btn dropdown-toggle">Island<span class="caret"></span> </button>
-                            <ul class="dropdown-menu">    
-                                <li><a class="hc" href="#">Georges Island</a></li>
-                                <li><a class="hc" href="#">Spectacle Island</a></li>
-                                <li><a class="hc" href="#">Peddocks Island</a></li>
-                            </ul>
-                        </div>
-                        <div class="btn-group3"> 
-                            <element id = "date"> Date: </element> 
-                            <input type="text" id="datepicker">
-                        </div>
-                        <div class="btn-group4"> 
-                            <button data-toggle="dropdown" class="btn dropdown-toggle">Time<span class="caret"></span> </button>
-                            <ul class="dropdown-menu">
-                                    <li><a class="hc" href="#">10:30</a></li>
-                                    <li><a class="hc" href="#">12:30</a></li>
-                            </ul>
-                        </div>
-                        <div class="add_dest">
-                            <button type="button" class="btn btn-default">+</button>
-                        </div>
-                        </br> 
-                        <div class= "finish"> Finish: </div>
-                        <div class="btn-group5"> 
-                            <button data-toggle="dropdown" class="btn dropdown-toggle">Enter Finish Point<span class="caret"></span> </button>
-                            <ul class="dropdown-menu">
-                                <li><input type="text" class="typeahead"></li>    
-                                <li><a class="hc" href="#">Boston</a></li>
-                                <li><a class="hc" href="#">Hull</a></li>
-                                <li><a class="hc" href="#">Hingham</a></li>
-                            </ul>
-                        </div>
-                        </br>
-                        <div class="buy_tix">
-                            <a href="https://ticketing.bostonharborcruises.com/WebStore/shop/ViewItems.aspx?CG=EXCR&C=HIFFRR15FIH">
-                                <button type="button" class="btn btn-success btn-lg">Buy Tickets</button>
-                            </a>
-                        </div>
-
-                        <div class="print_schedule">
-                                <button type="button" class="btn btn-success btn-lg">Print Schedule</button>
-                        </div>
-                    </div>
                 <div class="container-fluid">
-                <div id="map" class="col-sm-9">
-                    <p>map out your trip</p>
-                        <script type="text/javascript">
-                                var map;
-                                function initMap() {
-                                        var mapOptions =  {
-                                                        zoom: 11,
-                                                        center: {lat: 42.3117, lng: -70.9864},
-                                                        mapTypeControl: true,
-                                                        mapTypeControlOptions: {
-                                                                style: google.maps.MapTypeControlStyle.HORIZONTAL_BAR,
-                                                                position: google.maps.ControlPosition.TOP_CENTER
-                                                        },
-                                                        zoomControl: true,
-                                                        zoomControlOptions: {
-                                                                position: google.maps.ControlPosition.LEFT_CENTER
-                                                        },
-                                                        scaleControl: true,
-                                                        streetViewControl: true,
-                                                        streetViewControlOptions: {
-                                                                position: google.maps.ControlPosition.LEFT_TOP
-                                                        },
-                                                        fullscreenControl: true
-                                                }
-                                        map = new google.maps.Map(document.getElementById('map'), mapOptions);
-                                }
-                        </script>
+                        <div class="row">
+                                <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 pull-left" style="text-align:center">
+                                        <div class="container">
+                                                <div class="col-xs-6 col-sm-1 text-right">
+                                                        <img src="boat.png" alt="Boat Glif" style="width:60px;height:60px;">
+                                                </div>
+                                                <div class="col-xs-6 col-sm-3 text-left">
+                                                        <div class="title"> My itinerary </div>
+                                                </div>
+                                        </div>
+                                </br>
+                                <div class="container">
+                                        <div class="col-xs-6 col-sm-1 text-right">
+                                                <div class= "start"> Start: </div>
+                                        </div>
+                                        <div class="col-xs-6 col-sm-3 text-left">
+                                                <div class="btn-group1"> 
+                                                        <button id="start_title" data-toggle="dropdown" 
+                                                         class="btn dropdown-toggle">Enter Starting Point<span class="caret"></span> </button>
+                                                        <ul class="dropdown-menu">
+                                                                <li><input type="text" id="start_man" class="typeahead"></li>    
+                                                                <li><a class="hc" id="start_Boston">Boston</a></li>
+                                                                <li><a class="hc" id="start_Hull">Hull</a></li>
+                                                                <li><a class="hc" id="start_Hingham">Hingham</a></li>
+                                                        </ul>
+                                                </div>
+                                        </div>
+                                </div>
+                                </br>
+                                <div class="plan_trip"> Plan Your Trip </div>
+                                </br>
+                                <div class="container">
+                                        <div class="col-xs-4 col-sm-1 text-left">
+                                                <div class="btn-group2"> 
+                                                        <button data-toggle="dropdown" class="btn dropdown-toggle">
+                                                                Island<span class="caret"></span> </button>
+                                                        <ul class="dropdown-menu">    
+                                                                <li><a class="hc" id="Georges">Georges Island</a></li>
+                                                                <li><a class="hc" id="Spectacle">Spectacle Island</a></li>
+                                                                <li><a class="hc" id="Peddocks">Peddocks Island</a></li>
+                                                        </ul>
+                                                </div>
+                                        </div>
+                                        <div class="col-xs-4 col-sm-2">
+                                                <div class="btn-group3"> 
+                                                        <element id ="date"> Date: </element> 
+                                                        <input type="text" id="datepicker">
+                                                </div>
+                                        </div>
+                                        <div class="col-xs-4 col-sm-1">
+                                                <div class="btn-group4 text-left"> 
+                                                        <button data-toggle="dropdown" class="btn dropdown-toggle">
+                                                                Time<span class="caret"></span> </button>
+                                                        <ul class="dropdown-menu">
+                                                                <li><a class="hc" id="1030">10:30</a></li>
+                                                                <li><a class="hc" id="1200">12:30</a></li>
+                                                        </ul>
+                                                </div>
+                                        </div>
+                                </div>
+                                </br>
+                                <div class="container">
+                                        <div class="col-xs-3 col-sm-1 text-right">
+                                                <div class="add_dest">
+                                                        <button type="button" class="btn btn-default">+</button>
+                                                </div>
+                                        </div>
+                                        <div class="col-xs-3 col-sm-1 text-left">
+                                                <div class= "rem_dest">
+                                                        <button type="button" class="btn btn-default">-</button>
+                                                </div>
+                                        </div>
+                                </div>
+                                </br>
+                                <div class="container">
+                                        <div class="col-xs-6 col-sm-2">
+                                                <div class= "finish"> Finish: </div>
+                                        </div>
+                                        <div class="col-xs-6 col-sm-2 text-left">
+                                                <div class="btn-group5"> 
+                                                        <button data-toggle="dropdown" class="btn dropdown-toggle">
+                                                                Enter Finish Point<span class="caret"></span> </button>
+                                                        <ul class="dropdown-menu">
+                                                                <li><input type="text" id="finish_man" class="typeahead"></li>    
+                                                                <li><a class="hc" id="end_Boston">Boston</a></li>
+                                                                <li><a class="hc" id="end_Hull">Hull</a></li>
+                                                                <li><a class="hc" id="end_Hingham">Hingham</a></li>
+                                                        </ul>
+                                                </div>
+                                        </div>
+                                </div>
+                                </br>
+                                <div class="container">
+                                        <div class="col-xs-6 col-sm-2 text-right">
+                                                <div id="buy" class="buy_tix">
+                                        <a href="https://ticketing.bostonharborcruises.com/WebStore/shop/ViewItems.aspx?CG=EXCR&C=HIFFRR15FIH">
+                                                        <button type="button" class="btn btn-lg">Buy Tickets</button>
+                                                        </a>
+                                                </div>
+                                        </div>
+                                        <div class="col-xs-6 col-sm-2 text-left">
+                                                <div id="print" class="print_schedule">
+                                                        <button type="button" class="btn btn-lg">Print Schedule</button>
+                                                </div>
+                                        </div>
+                                </div>
+                        </div> 
+                        <div id="map-container" class="container-fluid">
+                                        <div id="map" class="col-xs-12 col-sm-8 col-md-8 col-lg-8 pull-right">
+                                                <p>map out your trip</p>
+                                                <script type="text/javascript">
+                                        var map;
+                                        function initMap() {
+                                                var mapOptions =  {
+                                                                zoom: 11,
+                                                                center: {lat: 42.3117, lng: -70.9864},
+                                                                mapTypeControl: true,
+                                                                mapTypeControlOptions: {
+                                                                        style: google.maps.MapTypeControlStyle.HORIZONTAL_BAR,
+                                                                        position: google.maps.ControlPosition.TOP_CENTER
+                                                                },
+                                                                zoomControl: true,
+                                                                zoomControlOptions: {
+                                                                        position: google.maps.ControlPosition.LEFT_CENTER
+                                                                },
+                                                                scaleControl: true,
+                                                                streetViewControl: true,
+                                                                streetViewControlOptions: {
+                                                                        position: google.maps.ControlPosition.LEFT_TOP
+                                                                },
+                                                                fullscreenControl: true
+                                                        }
+                                                map = new google.maps.Map(document.getElementById('map'), mapOptions);
+                                        }
+                                                </script>
+                                        </div>
+                                </div>
+                        </div>
+>>>>>>> b7c2c90ad42ab85f0289b4e1eb934a580d59ed6a
                 </div>
             </div>
             </div>

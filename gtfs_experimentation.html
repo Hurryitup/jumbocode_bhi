@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html>
+<head> 
+        <script type="text/javascript" src="./require.js"></script>
+        <script type="text/javascript">
+        var gtfs = require('./node_modules/gtfs/');
+        gtfs.agencies(function(err, agencies) {
+                console.log(agencies);
+        })
+        </script>
+</head>
+</html>
