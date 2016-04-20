@@ -4,18 +4,27 @@ html, body {
         padding: 0;
 }
 
-body {background-color: #f7f79c !important; }
+body {background-color: #f8f8ff !important; }
 
 .container-fluid {
-  padding-right: 0px;
+        padding-right: 0px;
+        height: 100%;
+        width: 100%;
 }
 
 #map-container {
+        height: 100%;
+        width: 100%;
+        padding-top: 0;
         padding-right: 0px;
+       /* issue c display: inline-block;*/
 }
 
 #map {
+        height: 100%;
+        width: 100%
         min-height: 500px;
+        display: inline;
 }
 /*@media all and (min-width: 1200px) {
   #map {
@@ -26,9 +35,16 @@ body {background-color: #f7f79c !important; }
     margin-left: 0%;
     margin-right: 0%;
     float: right;
-  }
+  } */
+  #map-container {
+        padding-right: 0px;
 }
 
+#map {
+        min-height: 500px;
+}
+}
+/*
 @media all and (max-width: 1200px) {
   #map {
         min-height: 500px;
@@ -113,7 +129,7 @@ body {background-color: #f7f79c !important; }
   img {
     margin-left: auto;
     margin-top: 7px;
-  }
+  }*/
   .title {
     margin-top: 7px;
     font-family: 'Lobster Two';
@@ -121,7 +137,7 @@ body {background-color: #f7f79c !important; }
     margin-left: auto;
     font-size: 215%;
   }
-
+/*
   .start {
     margin-left: auto;
     margin-top: auto;
@@ -145,7 +161,40 @@ body {background-color: #f7f79c !important; }
     font-family: 'Open Sans';
   }
 
-  .rem_dest {
+  .btn-group2 {
+    color: white;
+    position: absolute;
+    margin-top: 155px;
+    margin-left: 13px;
+    font-family: 'Open Sans';
+  }
+
+  .finish {
+    margin-left: 30px;
+    position: absolute;
+    margin-top: 250px;
+    font-size: 150%;
+    font-family: 'Open Sans';
+  }
+
+  .btn-group3 {
+    color: #99ccff;
+    position: absolute;
+    margin-top: 155px;
+    margin-left: 125px;
+    font-family: 'Open Sans';
+    width: 128px;
+    padding: 4px;
+    background-color: #84c7c6;
+    border-radius: 5px;
+    border-color: black;
+  }
+
+  input[id="datepicker"] {
+    width: 80px;
+  }
+
+  #date {
     color: white;
     margin-top: auto;
     margin-left: auto;
@@ -159,6 +208,7 @@ body {background-color: #f7f79c !important; }
     margin-left: auto;
     font-family: 'Open Sans';
     width: 120px; 
+
   }
 
   .finish {
@@ -176,7 +226,7 @@ body {background-color: #f7f79c !important; }
     font-family: 'Open Sans';
     width: 160px; 
     padding: 4px;
-    background-color: #fa9e25;
+    background-color: #84c7c6;
     border-radius: 5px;
   }
 
@@ -190,10 +240,9 @@ body {background-color: #f7f79c !important; }
 
   .btn-group4 {
     color: white;
-    margin-top: auto;
-    margin-left: auto;
     font-family: 'Open Sans';
     width: 2px;
+    background-color: #84c7c6;
   }
 
   .btn-group5 {
@@ -201,6 +250,8 @@ body {background-color: #f7f79c !important; }
     margin-left: auto;
     margin-top: auto;
     font-family: 'Open Sans';
+    border-color: black;
+    background-color: #84c7c6;
   }
 
   .add_dest {
@@ -220,6 +271,8 @@ body {background-color: #f7f79c !important; }
     margin-left: auto;
     margin-top: auto;
     font-family: 'Open Sans';
+    border-radius: 5px;
+    border-color: black;
     }
   #buy {
     color: #ED1C24 !important; 
