@@ -4,7 +4,11 @@ html, body {
         padding: 0;
 }
 
-body {background-color: #f7f79c !important; }
+body {background-color: #f8f8ff !important; }
+
+.btn-default, .btn-primary{
+  background-color: #ffffff !important;
+}
 
 .container-fluid {
   padding-right: 0px;
@@ -178,7 +182,7 @@ body {background-color: #f7f79c !important; }
     font-family: 'Open Sans';
     width: 160px; 
     padding: 4px;
-    background-color: #fa9e25;
+    background-color: #84c7c6;;
     border-radius: 5px;
   }
 
@@ -196,6 +200,7 @@ body {background-color: #f7f79c !important; }
     margin-left: auto;
     font-family: 'Open Sans';
     width: 2px;
+    background-color: #84c7c6;
   }
 
   .btn-group5 {
@@ -203,6 +208,7 @@ body {background-color: #f7f79c !important; }
     margin-left: auto;
     margin-top: auto;
     font-family: 'Open Sans';
+    background-color: #84c7c6;
   }
 
   .add_dest {
