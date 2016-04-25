@@ -17,6 +17,7 @@ body {background-color: #f8f8ff !important; }
         width: 100%;
         padding-top: 0;
         padding-right: 0px;
+        position: absolute;
        /* issue c display: inline-block;*/
 }
 
