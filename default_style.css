@@ -2,10 +2,10 @@ html, body {
         height:100%;
         margin: 0;
         padding: 0;
-/*        background-image: url("gradient.jpg"); */
+        background-image: url("gradient3.png"); 
 }
 
-body {background-color: #f8f8ff !important; }
+/*body {background-color: #f8f8ff !important; } */
 
 .container-fluid {
         padding-right: 0px;
@@ -19,7 +19,7 @@ body {background-color: #f8f8ff !important; }
         padding-top: 0;
         padding-right: 0px;
        /* issue c display: inline-block;*/
-        position: absolute;
+       /* position: absolute;  ** this breaks button functionality, for some reason */
 }
 
 #map {
@@ -226,14 +226,17 @@ body {background-color: #f8f8ff !important; }
     margin-top: auto;
     margin-left: auto;
     font-family: 'Open Sans';
-    width: 160px; 
+    width: auto; 
     padding: 4px;
     background-color: #84c7c6;
     border-radius: 5px;
   }
 
-  .btn {
-    background-color: #84c7c6;    
+  .buy_tix {
+   color: #FFFFFF;
+   background-color: #009900;
+   font-family: 'Open Sans';
+   width: 160px;
   }
 
 
@@ -274,7 +277,7 @@ body {background-color: #f8f8ff !important; }
     background: #ED1C24;
     } */
 
-  #buy {
+ /* #buy {
     margin-left: auto;
     margin-top: auto;
     font-family: 'Open Sans';
@@ -285,14 +288,14 @@ body {background-color: #f8f8ff !important; }
   #buy {
     color: #84c7c6 !important; 
     }
-
+*/
   .typeahead {
     color: black;
   }
 
-  #print {
+/*  #print {
     color: #ffffff;
     margin-left: auto;
     margin-top: auto;
     font-family: 'Open Sans';
-    }
+    } */
