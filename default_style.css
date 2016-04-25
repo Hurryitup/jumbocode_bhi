@@ -2,6 +2,7 @@ html, body {
         height:100%;
         margin: 0;
         padding: 0;
+/*        background-image: url("gradient.jpg"); */
 }
 
 body {background-color: #f8f8ff !important; }
@@ -17,8 +18,8 @@ body {background-color: #f8f8ff !important; }
         width: 100%;
         padding-top: 0;
         padding-right: 0px;
-        position: absolute;
        /* issue c display: inline-block;*/
+        position: absolute;
 }
 
 #map {
@@ -223,6 +224,11 @@ body {background-color: #f8f8ff !important; }
     border-radius: 5px;
   }
 
+  .btn {
+    background-color: #84c7c6;    
+  }
+
+
   input[id="datepicker"] {
     width: 110px;
   }
@@ -265,6 +271,10 @@ body {background-color: #f8f8ff !important; }
     font-family: 'Open Sans';
     border-radius: 5px;
     border-color: black;
+    color: #ffffff;
+    }
+  #buy {
+    color: #84c7c6 !important; 
     }
 
   .typeahead {
@@ -272,6 +282,7 @@ body {background-color: #f8f8ff !important; }
   }
 
   #print {
+    color: #ffffff;
     margin-left: auto;
     margin-top: auto;
     font-family: 'Open Sans';
