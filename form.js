@@ -1,3 +1,45 @@
+$(document).ready(function() {
+
+ var myCounter = 1;
+ $(".myDate").datepicker();
+ 
+ $("#moreDates").click(function(){
+
+  // var dPicker = document.createElement("input");
+  //               dPicker.type = "text";
+  //               // dPicker.name = "inputDate" + datepickcount;
+  //               // dPicker.id = "datepicker";
+  //               dPicker.className = "myDate";
+  //               document.body.appendChild(dPicker);
+  
+  $('.additionalDate input[name=inputDate]').each(function(index) {
+   $(this).addClass("myDate");
+   $(this).attr("name",$(this).attr("name") + myCounter);
+  });
+
+  jQuery(document).ready(function($){
+  //you can now use $ as your jQuery object.
+        var dat = $( '.myDate' );
+        if(!dat.data('datepicker')) {
+       dat.removeClass("hasDatepicker");
+       dat.datepicker();
+       // dat.datepicker("show");
+      }
+  });
+  
+  // $(".myDate").on('focus', function(){
+  //     var $this = $(this);
+  //     if(!$this.data('datepicker')) {
+  //      $this.removeClass("hasDatepicker");
+  //      $this.datepicker();
+  //      $this.datepicker("show");
+  //     }
+  // });
+  
+ });
+ 
+});
+
 function form_addElement() {
         // alert('a');
         var tripDiv = document.getElementById("trip")
@@ -40,11 +82,12 @@ function form_addElement() {
                 container2_5.appendChild(dEle);
         var dPicker = document.createElement("input");
                 dPicker.type = "text";
+                // dPicker.name = "inputDate" + datepickcount;
                 dPicker.id = "datepicker";
-                dPicker.className = "datepick hasdatepicker";
-                $(dPicker).datepicker();
+                dPicker.className = "datepick myDate";
                 container2_5.appendChild(dPicker);
                 container2.appendChild(container2_5);
+                // $(dPicker).datepicker();
                 // container2.appendChild(dPicker);
 
 
@@ -89,5 +132,23 @@ function form_addElement() {
         // tripDiv.appendChild(container);
         tripDiv.appendChild(container);
         tripDiv.innerHTML += "<br/ >"
-        $($dPicker).datepicker();
+        // $($dPicker).datepicker();
+
+        // $(".datepick").each(function () {
+        //         $(this).datepicker();
+        //         alert(this.id);
+        // });
+
+
+
+// $(".datepick").on('focus', function(){
+//         alert('a');
+//       var $this = $(this);
+//       if(!$this.data('datepicker')) {
+//        $this.removeClass("hasDatepicker");
+//        $this.datepicker();
+//        $this.datepicker("show");
+//       }
+//   });
+
 }
