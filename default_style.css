@@ -237,7 +237,7 @@ body {background-color: #f8f8ff !important; }
   }
 */
   input[id="datepicker"] {
-    width: 80px;
+    width: 10px;
   }
 
   #date {
@@ -282,7 +282,7 @@ body {background-color: #f8f8ff !important; }
 
 
   input[id="datepicker"] {
-    width: 110px;
+    width: 100px;
   }
 
   #date {
