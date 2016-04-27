@@ -3,7 +3,7 @@ $(function() {
   //       $("#datepicker").change(function () {
   //           dates[num_islands] = $(this).datepicker("getDate");
 		// });
-        $('.datepick').each(function(){
+        $('.datepicker').each(function(){
                 $(this).datepicker();
                 $(this).change(function () {
                         dates[num_islands] = $(this).datepicker("getDate");
