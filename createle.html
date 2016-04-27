@@ -1,0 +1,21 @@
+<html>
+
+<body>
+<script>
+document.body.onload = function() {
+        var newDiv = document.createElement("div"); 
+        newDiv.style="background-color: red;"
+        newDiv.id="hey";
+
+        var newContent = document.createElement("button"); 
+        newContent.innerHTML="Click here!!!";
+        newContent.setAttribute("onclick", "alert('stfu');");
+        
+        newDiv.appendChild(newContent);
+        document.body.appendChild(newDiv);
+}
+
+</script>
+</body>
+
+</html>

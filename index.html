@@ -5,6 +5,8 @@
                  <!-- Latest compiled and minified CSS -->
                 <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
 
+                <link rel="stylesheet" type="text/css" href="default_style.css">
+
                 <!-- jQuery library -->
                 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
 
@@ -15,6 +17,8 @@
 
                 <link href="http://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" type="text/css">
 
+                <script type="text/javascript" src="index.js">
+
                 <meta charset="utf-8">
                   <link rel="stylesheet" href="http://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
                  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
@@ -22,100 +26,109 @@
                   <link rel="stylesheet" href="http://resources/demos/style.css">
                  <link rel="stylesheet" type="text/css" href="default_style.css">
                   <script>
-                  $(function() {
-                    $( "#datepicker" ).datepicker();
-                  });
+                  // $(function() {
+                  //   // $( "#datepicker" ).datepicker();
+                  //   // $('.datepick').each(function(){
+                  //   //     $(this).datepicker();
+                  //   // });
+
+                  //   // $('body').on('focus',".datepick", function(){
+
+                  //   //     if( $(this).hasClass('hasDatepicker') === false )  {
+                  //   //         $(this).datepicker();
+                  //   //     }
+                  //   // });
+                  // });
                   </script>
+
+                  <script type="text/javascript" src="form.js"></script>
         </head>
         <body>
                 <div class="container-fluid">
                         <div class="row">
-                                <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 pull-left" style="text-align:center">
+                                <div class="col-sm-4"  style="text-align:center">
                                         <div class="container">
-                                                <div class="col-xs-6 col-sm-1 text-right">
+                                                <div class="col-xs-1">
                                                         <img src="boat.png" alt="Boat Glif" style="width:60px;height:60px;">
                                                 </div>
-                                                <div class="col-xs-6 col-sm-3 text-left">
+                                                <div class="col-xs-2">
                                                         <div class="title"> My itinerary </div>
                                                 </div>
                                         </div>
                                 </br>
                                 <div class="container">
-                                        <div class="col-xs-6 col-sm-1 text-right">
+                                        <div class="col-xs-1">
                                                 <div class= "start"> Start: </div>
                                         </div>
-                                        <div class="col-xs-6 col-sm-3 text-left">
+                                        <div class="col-xs-3">
                                                 <div class="btn-group1"> 
-                                                        <button id="start_title" data-toggle="dropdown" 
+                                                        <button data-toggle="dropdown" 
                                                          class="btn dropdown-toggle">Enter Starting Point<span class="caret"></span> </button>
                                                         <ul class="dropdown-menu">
-                                                                <li><input type="text" id="start_man" class="typeahead"></li>    
-                                                                <li><a class="hc" id="start_Boston">Boston</a></li>
-                                                                <li><a class="hc" id="start_Hull">Hull</a></li>
-                                                                <li><a class="hc" id="start_Hingham">Hingham</a></li>
+                                                                <li><input type="text" class="typeahead"></li>    
+                                                                <li><a class="hc" href="#">Boston</a></li>
+                                                                <li><a class="hc" href="#">Hull</a></li>
+                                                                <li><a class="hc" href="#">Hingham</a></li>
                                                         </ul>
                                                 </div>
                                         </div>
                                 </div>
                                 </br>
                                 <div class="plan_trip"> Plan Your Trip </div>
+                                <div id="trip"></div>
+                        <!--<div class= "rem_dest">
+                            <button type="button" class="btn btn-default">-</button>
+                        </div>-->
                                 </br>
-                                <div class="container">
-                                        <div class="col-xs-4 col-sm-1 text-left">
-                                                <div class="btn-group2"> 
+                                <!-- <div class="container">
+                                        <div class="col-xs-1 btn-group2">
                                                         <button data-toggle="dropdown" class="btn dropdown-toggle">
                                                                 Island<span class="caret"></span> </button>
                                                         <ul class="dropdown-menu">    
-                                                                <li><a class="hc" id="Georges">Georges Island</a></li>
-                                                                <li><a class="hc" id="Spectacle">Spectacle Island</a></li>
-                                                                <li><a class="hc" id="Peddocks">Peddocks Island</a></li>
+                                                                <li><a class="hc" href="#">Georges Island</a></li>
+                                                                <li><a class="hc" href="#">Spectacle Island</a></li>
+                                                                <li><a class="hc" href="#">Peddocks Island</a></li>
                                                         </ul>
-                                                </div>
                                         </div>
-                                        <div class="col-xs-4 col-sm-2">
+                                        <div class="col-xs-2">
                                                 <div class="btn-group3"> 
                                                         <element id ="date"> Date: </element> 
-                                                        <input type="text" id="datepicker">
+                                                        <input type="text" id="datepicker" class="datepick">
                                                 </div>
                                         </div>
-                                        <div class="col-xs-4 col-sm-1 text-left">
+                                        <div class="col-xs-1">
                                                 <div class="btn-group4"> 
                                                         <button data-toggle="dropdown" class="btn dropdown-toggle">
                                                                 Time<span class="caret"></span> </button>
                                                         <ul class="dropdown-menu">
-                                                                <li><a class="hc" id="1030">10:30</a></li>
-                                                                <li><a class="hc" id="1200">12:30</a></li>
+                                                                <li><a class="hc" href="#">10:30</a></li>
+                                                                <li><a class="hc" href="#">12:30</a></li>
                                                         </ul>
                                                 </div>
                                         </div>
-                                </div>
+                                </div> -->
                                 </br>
                                 <div class="container">
-                                        <div class="col-xs-3 col-sm-1 text-right">
+                                        <div class="col-xs-1">
                                                 <div class="add_dest">
-                                                        <button type="button" class="btn btn-default">+</button>
-                                                </div>
-                                        </div>
-                                        <div class="col-xs-3 col-sm-1 text-left">
-                                                <div class= "rem_dest">
-                                                        <button type="button" class="btn btn-default">-</button>
+                                                        <button type="button" class="btn btn-default" onclick="form_addElement();" id="moreDates">+</button>
                                                 </div>
                                         </div>
                                 </div>
                                 </br>
                                 <div class="container">
-                                        <div class="col-xs-6 col-sm-2">
+                                        <div class="col-xs-1">
                                                 <div class= "finish"> Finish: </div>
                                         </div>
-                                        <div class="col-xs-6 col-sm-2 text-left">
+                                        <div class="col-xs-3">
                                                 <div class="btn-group5"> 
                                                         <button data-toggle="dropdown" class="btn dropdown-toggle">
                                                                 Enter Finish Point<span class="caret"></span> </button>
                                                         <ul class="dropdown-menu">
-                                                                <li><input type="text" id="finish_man" class="typeahead"></li>    
-                                                                <li><a class="hc" id="end_Boston">Boston</a></li>
-                                                                <li><a class="hc" id="end_Hull">Hull</a></li>
-                                                                <li><a class="hc" id="end_Hingham">Hingham</a></li>
+                                                                <li><input type="text" class="typeahead"></li>    
+                                                                <li><a class="hc" href="#">Boston</a></li>
+                                                                <li><a class="hc" href="#">Hull</a></li>
+                                                                <li><a class="hc" href="#">Hingham</a></li>
                                                         </ul>
                                                 </div>
                                         </div>
@@ -168,5 +181,7 @@
                 <script async defer
                         src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBOccCom-vEeFD7ox9GjEqawE_YSDww6vE&callback=initMap">
                 </script>
+
+
         </body>
 </html>

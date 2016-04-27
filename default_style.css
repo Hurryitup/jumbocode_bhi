@@ -1,4 +1,5 @@
 html, body {
+        background-color: #f8f5ef;
         height:100%;
         margin: 0;
         padding: 0;
@@ -6,23 +7,19 @@ html, body {
 }
 
 .container-fluid {
-        padding-right: 0px;
-        height: 100%;
-        width: 100%;
+  padding-right: 0px;
 }
 
 #map-container {
-        height: 100%;
-        width: 100%;
-        padding-top: 0;
         padding-right: 0px;
 }
 
 #map {
-        height: 100%;
-        width: 100%
-        min-height: 500px;
+        height: 700px;
+        width:  800px;
         display: inline;
+        border-radius: 10px;
+        border-color: black;
 }
   #map-container {
         padding-right: 0px;
@@ -52,7 +49,7 @@ html, body {
   .start {
     margin-left: auto;
     margin-top: auto;
-    font-size: 130%;
+    font-size: 150%;
     font-family: 'Open Sans';
   }
 
@@ -87,14 +84,12 @@ html, body {
     margin-top: auto;
     margin-left: auto;
     font-family: 'Open Sans';
-    width: 120px; 
-
   }
 
   .finish {
     margin-left: auto;
     margin-top: auto;
-    font-size: 130%;
+    font-size: 150%;
     font-family: 'Open Sans';
   }
 
@@ -127,6 +122,8 @@ html, body {
 
   .btn-group4 {
     color: white;
+    margin-top: auto;
+    margin-left: auto;
     font-family: 'Open Sans';
     width: 2px;
     background-color: #5d9ea5; 
@@ -146,5 +143,4 @@ html, body {
     margin-top: auto;
     margin-left: auto;
     font-family: monospace;
-    font-size: 150%;
   }
