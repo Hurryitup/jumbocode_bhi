@@ -19,14 +19,14 @@ body {background-color: #f8f8ff !important; }
         padding-top: 0;
         padding-right: 0px;
        /* issue c display: inline-block;*/
-        position: absolute;
 }
 
 #map {
-        height: 100%;
-        width: 100%
-        min-height: 500px;
+        height: 700px;
+        width:  800px;
         display: inline;
+        border-radius: 10px;
+        border-color: black;
 }
 /*@media all and (min-width: 1200px) {
   #map {
@@ -133,13 +133,14 @@ body {background-color: #f8f8ff !important; }
     margin-left: auto;
     font-size: 215%;
   }
-/*
+
   .start {
     margin-left: auto;
     margin-top: auto;
     font-size: 130%;
     font-family: 'Open Sans';
-    /*font-weight: bold;*/
+    font-weight: bold;
+  }
   }
 
   .btn-group1 {
@@ -276,6 +277,9 @@ body {background-color: #f8f8ff !important; }
   #buy {
     color: #84c7c6 !important; 
     }
+  a:link{
+    color: white;
+  }
 
   .typeahead {
     color: black;
