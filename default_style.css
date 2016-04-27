@@ -1,63 +1,57 @@
 html, body {
+        background-color: #f8f5ef;
         height:100%;
         margin: 0;
         padding: 0;
+/*        background-image: url("gradient.jpg"); */
 }
 
-body {background-color: #f8f8ff !important; }
-
 .container-fluid {
-        padding-right: 0px;
-        height: 100%;
-        width: 100%;
+  padding-right: 0px;
 }
 
 #map-container {
-        height: 100%;
-        width: 100%;
-        padding-top: 0;
         padding-right: 0px;
-       /* issue c display: inline-block;*/
 }
 
 #map {
-        height: 100%;
-        width: 100%
-        min-height: 500px;
+        height: 700px;
+        width:  800px;
         display: inline;
+        border-radius: 10px;
+        border-color: black;
 }
-@media all and (min-width: 1200px) {
- /* #map {
-    height: 60%;
+/*@media all and (min-width: 1200px) {
+  #map {
+    min-height: 500px;
     width: 70%;
-    margin-left: 2%;
-    margin-right: 2%;
-    margin-top: 20px;
+    display: block;
+    position: relative;
+    margin-left: 0%;
+    margin-right: 0%;
     float: right;
-  } */
-  #map-container {
-        padding-right: 0px;
+  }
 }
 
 #map {
         min-height: 500px;
 }
-}
+
 /*
 @media all and (max-width: 1200px) {
   #map {
-        height: 60%;
+        min-height: 500px;
+        position: relative;
         width:67%;
+        display: block;
         margin-left: 2%;
-        margin-right: 2%;
-        margin-top: 20px;
+        margin-right: 0%;
         float: right;
   }
 } 
-
 @media all and (max-width: 1100px) {
   #map {
-        height: 60%;
+        min-height: 60%;
         width: 64%;
         margin-left: 2%;
         margin-right: 2%;
@@ -65,21 +59,17 @@ body {background-color: #f8f8ff !important; }
         float: right;
   }
 }
-
 @media all and (max-width: 1000px) {
   #map {
-        height: 60%;
-        width: 61%;
-        margin-left: 2%;
+        min-height: 60%;
         margin-right: 2%;
         margin-top: 20px;
         float: right;
   }
 }
-
 @media all and (max-width: 900px) {
   #map {
-        height: 60%;
+        min-height: 60%;
         width: 57%;
         margin-left: 2%;
         margin-right: 2%;
@@ -87,10 +77,9 @@ body {background-color: #f8f8ff !important; }
         float: right;
   }
 }
-
 @media all and (max-width: 800px) {
   #map {
-        height: 60%;
+        min-height: 60%;
         width: 54%;
         margin-left: 2%;
         margin-right: 2%;
@@ -98,10 +87,9 @@ body {background-color: #f8f8ff !important; }
         float: right;
   }
 }
-
 @media all and (max-width: 750px) {
   #map {
-        height: 60%;
+        min-height: 60%;
         width: 51%;
         margin-left: 2%;
         margin-right: 2%;
@@ -109,74 +97,78 @@ body {background-color: #f8f8ff !important; }
         float: right;
   }
 }
-
 @media all and (max-width: 700px) {
   #map {
-        height: 60%;
+        min-height: 100%;
         width:96%;
         margin-left: 2%;
         margin-right: 2%;
         margin-top: 375px;
-        float: left;
+        float: right;
   }
 }
-
-@media all and (min-width: 640px) {
+*/
+@media all and (min-width: 0px) {
   .dropdown-toggle{
-      background-color: #fa9e25;
+      background-color: #84c7c6;
   }
 
   img {
+    /* position: absolute; */
     margin-left: auto;
     margin-top: 7px;
-  }*/
+  }
   .title {
     margin-top: 7px;
     font-family: 'Lobster Two';
     color: #ED1C24;
     margin-left: auto;
+    /* position: absolute; */
     font-size: 215%;
   }
-/*
+
   .start {
     margin-left: auto;
+    /* position: absolute; */
     margin-top: auto;
-    font-size: 130%;
+    font-size: 150%;
     font-family: 'Open Sans';
-    /*font-weight: bold;*/
+    font-weight: bold;
+  }
   }
 
   .btn-group1 {
     color: white;
     margin-left: auto;
+    /* position: absolute; */
     margin-top: auto;
     font-family: 'Open Sans';
   }
 
   .plan_trip {
     margin-left: auto;
+    /* position: absolute; */
     margin-top: auto;
     font-size: 130%;
     font-weight: bold;
     font-family: 'Open Sans';
   }
 
-  .btn-group2 {
+/*  .btn-group2 {
     color: white;
     position: absolute;
     margin-top: 155px;
     margin-left: 13px;
     font-family: 'Open Sans';
   }
-
   .finish {
     margin-left: 30px;
     position: absolute;
     margin-top: 250px;
     font-size: 150%;
+    text-decoration: underline;
     font-family: 'Open Sans';
   }
-
   .btn-group3 {
     color: #99ccff;
     position: absolute;
@@ -189,48 +181,54 @@ body {background-color: #f8f8ff !important; }
     border-radius: 5px;
     border-color: black;
   }
-
+*/
   input[id="datepicker"] {
     width: 80px;
   }
 
   #date {
     color: white;
+    /* position: absolute; */
     margin-top: auto;
     margin-left: auto;
     font-family: 'Open Sans';
+    font-family: monospace;
   }
 
   .btn-group2 {
     color: white;
+    /* position: absolute; */
     margin-top: auto;
     margin-left: auto;
     font-family: 'Open Sans';
-    width: 120px; 
-
   }
 
   .finish {
     margin-left: auto;
+    /* position: absolute; */
     margin-top: auto;
-    font-size: 130%;
+    font-size: 150%;
     font-family: 'Open Sans';
-    /*font-weight: bold; */
   }
 
   .btn-group3 {
-    color: #99ccff;
+    color: #84c7c6;
     margin-top: auto;
     margin-left: auto;
     font-family: 'Open Sans';
-    width: 160px; 
+    width: 128px; 
     padding: 4px;
-    background-color: #84c7c6;
+    background-color: #99ccff;
     border-radius: 5px;
   }
 
+  .btn {
+    background-color: #84c7c6;    
+  }
+
+
   input[id="datepicker"] {
-    width: 110px;
+    width: 80px;
   }
 
   #date {
@@ -239,54 +237,56 @@ body {background-color: #f8f8ff !important; }
 
   .btn-group4 {
     color: white;
+    /* position: absolute; */
+    margin-top: auto;
+    margin-left: auto;
     font-family: 'Open Sans';
-    width: 2px;
-    background-color: #84c7c6;
   }
 
   .btn-group5 {
     color: white;
     margin-left: auto;
+    /* position: absolute; */
     margin-top: auto;
     font-family: 'Open Sans';
     border-color: black;
-    background-color: #84c7c6;
   }
 
   .add_dest {
     color: white;
+    /* position: absolute; */
     margin-top: auto;
     margin-left: auto;
-    /*font-family: 'Open Sans'; */
+    font-family: 'Open Sans';
     font-family: monospace;
-    font-size: 150%;
+    /*padding: 5%;*/
   }
- /* .btn-success {
-    color: #ffffff;
-    background: #ED1C24;
-    } */
 
-  #buy {
+  .buy_tix {
     margin-left: auto;
+    /* position: absolute; */
     margin-top: auto;
     font-family: 'Open Sans';
     border-radius: 5px;
     border-color: black;
+    color: #ffffff;
     }
   #buy {
-    color: #ED1C24 !important; 
+    color: #84c7c6 !important; 
     }
+  a:link{
+    color: white;
+  }
 
   .typeahead {
     color: black;
   }
 
   #print {
+    color: #ffffff;
     margin-left: auto;
+    /* position: absolute; */
     margin-top: auto;
     font-family: 'Open Sans';
-    }
-  #buy {
-    color: #ED1C24 !important;
     }
 

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="default_style.css">
+  </head>
+  <body>
+    <div id="map">
+      <script type="text/javascript">
+
+
+        var map;
+
+        function initMap() {
+          var directionsDisplay = new google.maps.DirectionsRenderer();;
+          var directionsService = new google.maps.DirectionsService();
+
+          var request = {
+            origin:"Easton, MA",
+            destination:"Boston, MA",
+            travelMode: google.maps.TravelMode.DRIVING
+          };
+
+          var mapOptions =  {
+              zoom: 12,
+              center: {lat: 42.3601, lng: -71.0589},
+              mapTypeControl: true,
+              mapTypeControlOptions: {
+                style: google.maps.MapTypeControlStyle.DROPDOWN_MENU,
+                position: google.maps.ControlPosition.TOP_RIGHT,
+                mapTypeIds: [google.maps.MapTypeId.HYBRID, 'map_style']
+              },
+              zoomControl: true,
+              zoomControlOptions: {
+                position: google.maps.ControlPosition.TOP_LEFT,
+              },
+              scaleControl: true,
+              streetViewControl: false,
+              // streetViewControlOptions: {
+              //         position: google.maps.ControlPosition.LEFT_TOP
+              // },
+              // fullscreenControl: true
+            }
+          map = new google.maps.Map(document.getElementById('map'), mapOptions);
+
+          directionsService.route(request, function(response, status) {
+            if (status == google.maps.DirectionsStatus.OK) {
+              directionsDisplay.setDirections(response);
+            }
+          });
+
+          directionsDisplay.setMap(map);
+
+          // map.mapTypes.set('map_style', styledMap);
+          // map.setMapTypeId('map_style');
+        }
+      </script>
+    </div>
+
+    <script async defer
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBOccCom-vEeFD7ox9GjEqawE_YSDww6vE&callback=initMap">
+    </script>
+  </body>
+</html>

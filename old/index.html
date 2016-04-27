@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html>
+        <head>
+                <link rel="stylesheet" type="text/css" href="default_style.css">
+
+                 <!-- Latest compiled and minified CSS -->
+                <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+
+                <!-- jQuery library -->
+                <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+
+                <!-- Latest compiled JavaScript -->
+                <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+                <link href="http://fonts.googleapis.com/css?family=Lobster+Two" rel="stylesheet" type="text/css">
+
+                <link href="http://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" type="text/css">
+
+                <meta charset="utf-8">
+                  <link rel="stylesheet" href="http://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+                 <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+                 <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.9/jquery-ui.js"></script>
+                  <link rel="stylesheet" href="http://resources/demos/style.css">
+                  <script>
+                  $(function() {
+                    $( "#datepicker" ).datepicker();
+                  });
+                  </script>
+
+                  <script type="text/javascript" src="form.js"></script>
+        </head>
+        <body>
+                <img src="boat.png" alt="Boat Glif" style="width:60px;height:60px;">
+                <div class="title"> My itinerary </div>
+                <div class= "start"> Start: </div>
+                <div class="btn-group1"> 
+                        <button data-toggle="dropdown" class="btn dropdown-toggle">Enter Starting Point<span class="caret"></span> </button>
+                        <ul class="dropdown-menu">
+                                <li><input type="text" class="typeahead"></li>    
+                                <li><a class="hc" href="#">Boston</a></li>
+                                <li><a class="hc" href="#">Hull</a></li>
+                                <li><a class="hc" href="#">Hingham</a></li>
+                        </ul>
+                </div>
+
+                <div class="plan_trip"> Plan Your Trip </div>
+                        <div id="trip">
+                        </div>
+                <div class="btn-group2">
+                        <button type="button" class="btn btn-default"><b>–</button>
+                        <button data-toggle="dropdown" class="btn dropdown-toggle">island<span class="caret"></span> </button>
+                        <ul class="dropdown-menu">    
+                                <li><a class="hc" href="#">Georges Island</a></li>
+                                <li><a class="hc" href="#">Spectacle Island</a></li>
+                                <li><a class="hc" href="#">Peddocks Island</a></li>
+                        </ul><br />
+                        <button type="button" id="form_addbutton" class="btn btn-default" onclick="form_addElement()"><b>+</button>
+
+                </div> 
+
+                <div class="btn-group3"> 
+                        <!--<button data-toggle="dropdown" class="btn dropdown-toggle">Date<span class="caret"></span> </button>
+                        <ul class="dropdown-menu">
+                                <li><input type="text" id="datepicker"></a>
+                                </li>
+                        </ul>-->
+                        <element id = "date"> Date: </element> 
+                        <input type="text" id="datepicker">
+                </div>
+
+                <div class="btn-group4"> 
+                        <button data-toggle="dropdown" class="btn dropdown-toggle">Time<span class="caret"></span> </button>
+                        <ul class="dropdown-menu">
+                                <li><a class="hc" href="#">10:30</a></li>
+                                <li><a class="hc" href="#">12:30</a></li>
+                        </ul>
+                </div>
+
+                <div class= "finish"> Finish: </div>
+                <div class="btn-group5"> 
+                        <button data-toggle="dropdown" class="btn dropdown-toggle">Enter Finish Point<span class="caret"></span> </button>
+                        <ul class="dropdown-menu">
+                                <li><input type="text" class="typeahead"></li>    
+                                <li><a class="hc" href="#">Boston</a></li>
+                                <li><a class="hc" href="#">Hull</a></li>
+                                <li><a class="hc" href="#">Hingham</a></li>
+                        </ul>
+                </div>
+
+                <div class="buy_tix">
+                    <a href="https://ticketing.bostonharborcruises.com/WebStore/shop/ViewItems.aspx?CG=EXCR&C=HIFFRR15FIH">
+                        <button type="button" class="btn btn-success btn-lg">Buy Tickets</button>
+                    </a>
+                </div>
+
+                <div class="print_schedule">
+                        <button type="button" class="btn btn-success btn-lg">Print Schedule</button>
+                </div>
+
+                <div id="map">
+                        <script type="text/javascript">
+
+
+                                var map;
+                                function initMap() {
+                                        var styles = [
+                                            {
+                                              stylers: [
+                                                { hue: "#004488" },
+                                                // { saturation: 0 },
+                                              ]
+                                            },{
+                                              featureType: "road",
+                                              elementType: "geometry",
+                                              stylers: [
+                                                { color: "#ffffff" },
+                                                // { lightness: -50 },
+                                                // { saturation: -100 },
+                                                // { visibility: "simplified" }
+                                              ]
+                                            },{
+                                              featureType: "road",
+                                              elementType: "labels",
+                                              stylers: [
+                                                { visibility: "off" }
+                                              ]
+                                            },{
+                                              featureType: "landscape",
+                                              elementType: "geometry",
+                                              stylers: [
+                                                { color: "#468a24" },
+                                                // { lightness: -75 },
+                                                // { saturation: -30 },
+                                                // { visibility: "simplified" }
+                                              ]
+                                            },{
+                                              featureType: "poi",
+                                              elementType: "geometry",
+                                              stylers: [
+                                                { color: "#68ac46" },
+                                                // { lightness: -75 },
+                                                // { saturation: -30 },
+                                                // { visibility: "simplified" }
+                                              ]
+                                            },{
+                                              featureType: "water",
+                                              elementType: "geometry",
+                                              stylers: [
+                                                { hue: "#002244" },
+                                                { lightness: -75 },
+                                                { saturation: -30 },
+                                                // { visibility: "simplified" }
+                                              ]
+                                            },{
+                                              // featureType: "poi",
+                                              elementType: "labels.text.stroke",
+                                              stylers: [
+                                                { color: "#000000" },
+                                                // { lightness: -75 },
+                                                // { saturation: -30 },
+                                                // { visibility: "simplified" }
+                                              ],
+                                            },{
+                                              // featureType: "poi",
+                                              elementType: "labels.text.fill",
+                                              stylers: [
+                                                { color: "#ffffff" },
+                                                // { lightness: -75 },
+                                                // { saturation: -30 },
+                                                // { visibility: "simplified" }
+                                              ],
+                                            }
+                                          ];
+
+                                        var styledMap = new google.maps.StyledMapType(styles, {name: "Styled Map"});
+
+                                        var mapOptions =  {
+                                                        zoom: 11,
+                                                        center: {lat: 42.3117, lng: -70.9864},
+                                                        mapTypeControl: true,
+                                                        mapTypeControlOptions: {
+                                                                style: google.maps.MapTypeControlStyle.DROPDOWN_MENU,
+                                                                position: google.maps.ControlPosition.TOP_RIGHT,
+                                                                mapTypeIds: [google.maps.MapTypeId.HYBRID, 'map_style']
+                                                        },
+                                                        zoomControl: true,
+                                                        zoomControlOptions: {
+                                                                position: google.maps.ControlPosition.TOP_LEFT,
+                                                        },
+                                                        scaleControl: true,
+                                                        streetViewControl: false,
+                                                        // streetViewControlOptions: {
+                                                        //         position: google.maps.ControlPosition.LEFT_TOP
+                                                        // },
+                                                        // fullscreenControl: true
+                                                }
+                                        map = new google.maps.Map(document.getElementById('map'), mapOptions);
+
+                                        map.mapTypes.set('map_style', styledMap);
+                                        map.setMapTypeId('map_style');
+                                }
+                        </script>
+                </div>
+
+                <script async defer
+                        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBOccCom-vEeFD7ox9GjEqawE_YSDww6vE&callback=initMap">
+                </script>
+        </body>
+</html>
