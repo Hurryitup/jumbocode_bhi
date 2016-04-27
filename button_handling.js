@@ -33,11 +33,11 @@ $(document).ready(function(){
 		start = "Hull";
 		document.getElementById("start_title").innerHTML = start;		 
 	});
-	$("#start_Hingham").click(function(){ 
-		start = "Hingham"; 
+	$("#start_Hingham").click(function(){
+		start = "Hingham";
 		document.getElementById("start_title").innerHTML = start;
 	});
-	$("#Georges").click(function(){ 
+	$("#Georges").click(function(){
 		stops[num_islands] = "Georges Island"; 
 		document.getElementById("island_title").innerHTML = "Georges";		
 	});
