@@ -42,7 +42,7 @@ $(document).ready(function() {
 
 function form_addElement() {
         // alert('a');
-        var tripDiv = document.getElementById("trip")
+        var tripDiv = document.getElementById("trip");
 
         var container = document.createElement("div");
         container.className = "container";
@@ -83,7 +83,7 @@ function form_addElement() {
         var dPicker = document.createElement("input");
                 dPicker.type = "text";
                 // dPicker.name = "inputDate" + datepickcount;
-                dPicker.id = "datepicker";
+                // dPicker.id = "datepicker";
                 dPicker.className = "datepick myDate";
                 container2_5.appendChild(dPicker);
                 container2.appendChild(container2_5);
@@ -131,13 +131,14 @@ function form_addElement() {
         // newLine.appendChild(btng2);
         // tripDiv.appendChild(container);
         tripDiv.appendChild(container);
-        tripDiv.innerHTML += "<br/ >"
-        // $($dPicker).datepicker();
+        // tripDiv.appendChild(document.createElement("br"));
+        tripDiv.innerHTML += "<br/>";
 
         // $(".datepick").each(function () {
         //         $(this).datepicker();
         //         alert(this.id);
         // });
+updateDatePickers();
 
 
 
