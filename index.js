@@ -22,9 +22,10 @@ var db = MongoClient.connect(mongoUri, function(error, databaseConnection) {
 
 app.get('/getTimes', function(request, response) {
 	// var route = request.query.route;
-	gtfs.getStoptimesByStop("localAgency", "NPS_BOHA__R1", "NPS_BOHA__GEIS", 0, function(err, routes) {
-		console.log(routes);
-		console.log(err);
+	gtfs.getStopTimes(function (something) {//ByStop("localAgency", "NPS_BOHA__R1", "NPS_BOHA__GEIS", 0, function(err, routes) {
+		// console.log(routes);
+		// console.log(err);
+		console.log(something);
 	});
 });
 
