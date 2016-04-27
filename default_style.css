@@ -125,7 +125,7 @@ html, body {
 */
 @media all and (min-width: 0px) {
   .dropdown-toggle{
-      background-color: #84c7c6;
+      background-color: #5d9ea5; /*#84c7c6; */
   }
 
   img {
@@ -139,7 +139,7 @@ html, body {
     margin-left: auto;
     font-size: 215%;
   }
-/*
+
   .start {
     margin-left: auto;
     margin-top: auto;
@@ -201,7 +201,6 @@ html, body {
     margin-top: auto;
     margin-left: auto;
     font-family: 'Open Sans';
-    font-family: monospace;
   }
 
   .btn-group2 {
@@ -222,13 +221,13 @@ html, body {
   }
 
   .btn-group3 {
-    color: #84c7c6;
+    color: #5d9ea5; /*#84c7c6;*/
     margin-top: auto;
     margin-left: auto;
     font-family: 'Open Sans';
     width: auto; 
     padding: 4px;
-    background-color: #84c7c6;
+    background-color: #5d9ea5; /* #84c7c6; */
     border-radius: 5px;
   }
 
@@ -241,7 +240,7 @@ html, body {
 
 
   input[id="datepicker"] {
-    width: 110px;
+    width: 100px;
   }
 
   #date {
@@ -252,7 +251,7 @@ html, body {
     color: white;
     font-family: 'Open Sans';
     width: 2px;
-    background-color: #84c7c6;
+    background-color: #5d9ea5; /* #84c7c6; */
   }
 
   .btn-group5 {
@@ -261,7 +260,7 @@ html, body {
     margin-top: auto;
     font-family: 'Open Sans';
     border-color: black;
-    background-color: #84c7c6;
+    background-color: #5d9ea5; /*#84c7c6;*/
   }
 
   .add_dest {
