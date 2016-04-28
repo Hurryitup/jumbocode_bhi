@@ -227,7 +227,7 @@ body {background-color: #f8f8ff !important; }
     margin-top: auto;
     margin-left: auto;
     font-family: 'Open Sans';
-    font-family: monospace;
+    /*font-family: monospace; */
   }
 
   .btn-group2 {
