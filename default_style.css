@@ -209,13 +209,7 @@ body {background-color: #f8f8ff !important; }
     padding:10px;
   }
 
-/*  .btn-group2 {
-    color: white;
-    position: absolute;
-    margin-top: 155px;
-    margin-left: 13px;
-    font-family: 'Open Sans';
-  }
+
   .finish {
     margin-left: 30px;
     position: absolute;
@@ -223,19 +217,7 @@ body {background-color: #f8f8ff !important; }
     font-size: 150%;
     font-family: 'Open Sans';
   }
-  .btn-group3 {
-    color: #99ccff;
-    position: absolute;
-    margin-top: 155px;
-    margin-left: 125px;
-    font-family: 'Open Sans';
-    width: 128px;
-    padding: 4px;
-    background-color: #84c7c6;
-    border-radius: 5px;
-    border-color: black;
-  }
-*/
+  
   input[id="datepicker"] {
     width: 10px;
   }
@@ -262,7 +244,7 @@ body {background-color: #f8f8ff !important; }
     margin-top: auto;
     font-size: 130%;
     font-family: 'Open Sans';
-    /*font-weight: bold; */
+    font-weight: bold;
   }
 
   .btn-group3 {
