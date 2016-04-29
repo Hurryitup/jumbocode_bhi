@@ -25,8 +25,6 @@ body {background-color: #f8f8ff !important; }
         height: 700px;
         width:  800px;
         display: inline;
-        border-radius: 10px;
-        border-color: black;
 }
 /*@media all and (min-width: 1200px) {
   #map {
@@ -60,8 +58,6 @@ body {background-color: #f8f8ff !important; }
         height: 700px;
         width:  1200px;
         display: inline;
-        border-radius: 10px;
-        border-color: black;
         float: left;
   }
 }
@@ -78,8 +74,6 @@ body {background-color: #f8f8ff !important; }
         height: 700px;
         width:  1100px;
         display: inline;
-        border-radius: 10px;
-        border-color: black;
         float: left;
   }
 }
@@ -96,8 +90,6 @@ body {background-color: #f8f8ff !important; }
         height: 700px;
         width:  1000px;
         display: inline;
-        border-radius: 10px;
-        border-color: black;
         float: left;
     }
 }
@@ -114,8 +106,6 @@ body {background-color: #f8f8ff !important; }
         height: 700px;
         width:  900px;
         display: inline;
-        border-radius: 10px;
-        border-color: black;
         float: left;
     }
 }
@@ -132,8 +122,6 @@ body {background-color: #f8f8ff !important; }
         height: 700px;
         width:  800px;
         display: inline;
-        border-radius: 10px;
-        border-color: black;
         float: left;
     }
 }
@@ -150,8 +138,6 @@ body {background-color: #f8f8ff !important; }
         height: 700px;
         width:  750px;
         display: inline;
-        border-radius: 10px;
-        border-color: black;
         float: left;
     }
 }
