@@ -211,9 +211,9 @@ body {background-color: #f8f8ff !important; }
 
 
   .finish {
-    margin-left: 30px;
-    position: absolute;
-    margin-top: 250px;
+    margin-left: auto;
+    position: relative;
+    margin-top: auto;
     font-size: 150%;
     font-family: 'Open Sans';
   }

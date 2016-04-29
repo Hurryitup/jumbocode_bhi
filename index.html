@@ -47,119 +47,119 @@
                 <div class="container-fluid">
                         <div class="row">
                                 <div class="col-sm-4"  style="text-align:center">
-                                        <div class="container">
-                                                <div class="col-xs-1">
+                                        <div class="container-fluid">
+                                                <div class="col-xs-4 text-right">
                                                         <img src="boat.png" alt="Boat Glif" style="width:60px;height:60px;">
                                                 </div>
-                                                <div class="col-xs-2">
-                                                        <div class="title pull-right"> My itinerary </div>
+                                                <div class="col-xs-8 text-left">
+                                                        <div class="title"> My itinerary </div>
                                                 </div>
                                         </div>
                                 </br>
-                                <div class="container">
-                                        <div class="col-xs-1">
-                                                <div class= "start"> Start: </div>
-                                        </div>
-                                        <div class="col-xs-3">
-                                                <div class="btn-group1"> 
-                                                        <button data-toggle="dropdown" 
-                                                         class="btn dropdown-toggle">Enter Starting Point<span class="caret"></span> </button>
-                                                        <ul class="dropdown-menu">
-                                                                <li><input type="text" class="typeahead"></li>    
-                                                                <li><a class="hc" href="#">Boston</a></li>
-                                                                <li><a class="hc" href="#">Hull</a></li>
-                                                                <li><a class="hc" href="#">Hingham</a></li>
-                                                        </ul>
-                                                </div>
-                                        </div>
-                                </div>
                                 </br>
-                                <div class = "container">
-                                        <div class = "col-xs-1"></div> <!-- buffer div -->
-                                        <div class = "col-xs-3">
-                                                <div class="plan_trip"> Plan Your Trip </div>
-                                                <div class="explain_planning">Use + button for a multi-island trip</div>
-                                                </br>
-                                        </div>
-                                </div>
-                                <div id="trip"></div>
-                        <!--<div class= "rem_dest">
-                            <button type="button" class="btn btn-default">-</button>
-                        </div>-->
-                                <!--</br>-->
-                                <!-- <div class="container">
-                                        <div class="col-xs-1 btn-group2">
-                                                        <button data-toggle="dropdown" class="btn dropdown-toggle">
-                                                                Island<span class="caret"></span> </button>
-                                                        <ul class="dropdown-menu">    
-                                                                <li><a class="hc" href="#">Georges Island</a></li>
-                                                                <li><a class="hc" href="#">Spectacle Island</a></li>
-                                                                <li><a class="hc" href="#">Peddocks Island</a></li>
-                                                        </ul>
-                                        </div>
-                                        <div class="col-xs-2">
-                                                <div class="btn-group3"> 
-                                                        <element id ="date"> Date: </element> 
-                                                        <input type="text" id="datepicker" class="datepick">
+                                        <div class="container-fluid">
+                                                <div class="col-xs-4 text-right">
+                                                        <div class= "start"> Start: </div>
+                                                </div>
+                                                <div class="col-xs-8 text-left">
+                                                        <div class="btn-group1"> 
+                                                                <button data-toggle="dropdown" 
+                                                                 class="btn dropdown-toggle">Enter Starting Point<span class="caret"></span> </button>
+                                                                <ul class="dropdown-menu">
+                                                                        <li><input type="text" class="typeahead"></li>    
+                                                                        <li><a class="hc" href="#">Boston</a></li>
+                                                                        <li><a class="hc" href="#">Hull</a></li>
+                                                                        <li><a class="hc" href="#">Hingham</a></li>
+                                                                </ul>
+                                                        </div>
                                                 </div>
                                         </div>
-                                        <div class="col-xs-1">
-                                                <div class="btn-group4"> 
-                                                        <button data-toggle="dropdown" class="btn dropdown-toggle">
-                                                                Time<span class="caret"></span> </button>
-                                                        <ul class="dropdown-menu">
-                                                                <li><a class="hc" href="#">10:30</a></li>
-                                                                <li><a class="hc" href="#">12:30</a></li>
-                                                        </ul>
+                                        </br>
+                                        <div class = "container-fluid">
+                                                <div class = "col-xs-12">
+                                                        <div class="plan_trip"> Plan Your Trip </div>
+                                                        <div class="explain_planning">Use + button for a multi-island trip</div>
+                                                        </br>
                                                 </div>
                                         </div>
-                                </div> -->
-                                <!--</br>-->
-                                <div class="container">
-                                        <div class="col-xs-1">
-                                                <div class="add_dest">
-                                                        <button type="button" class="btn btn-default" onclick="form_addElement();" id="moreDates">+</button>
+                                        <div id="trip"></div>
+                                <!--<div class= "rem_dest">
+                                    <button type="button" class="btn btn-default">-</button>
+                                </div>-->
+                                        <!--</br>-->
+                                        <!-- <div class="container-fluid">
+                                                <div class="col-xs-3 btn-group2">
+                                                                <button data-toggle="dropdown" class="btn dropdown-toggle">
+                                                                        Island<span class="caret"></span> </button>
+                                                                <ul class="dropdown-menu">    
+                                                                        <li><a class="hc" href="#">Georges Island</a></li>
+                                                                        <li><a class="hc" href="#">Spectacle Island</a></li>
+                                                                        <li><a class="hc" href="#">Peddocks Island</a></li>
+                                                                </ul>
+                                                </div>
+                                                <div class="col-xs-6">
+                                                        <div class="btn-group3"> 
+                                                                <element id ="date"> Date: </element> 
+                                                                <input type="text" id="datepicker" class="datepick">
+                                                        </div>
+                                                </div>
+                                                <div class="col-xs-3">
+                                                        <div class="btn-group4"> 
+                                                                <button data-toggle="dropdown" class="btn dropdown-toggle">
+                                                                        Time<span class="caret"></span> </button>
+                                                                <ul class="dropdown-menu">
+                                                                        <li><a class="hc" href="#">10:30</a></li>
+                                                                        <li><a class="hc" href="#">12:30</a></li>
+                                                                </ul>
+                                                        </div>
+                                                </div>
+                                        </div> -->
+                                        <!--</br>-->
+                                        <div class="container-fluid">
+                                                <div class="col-xs-3">
+                                                        <div class="add_dest">
+                                                                <button type="button" class="btn btn-default" onclick="form_addElement();" id="moreDates">+</button>
+                                                        </div>
                                                 </div>
                                         </div>
-                                </div>
-                                </br>
-                                <div class="container">
-                                        <div class="col-xs-1">
-                                                <div class= "finish"> Finish: </div>
-                                        </div>
-                                        <div class="col-xs-3">
-                                                <div class="btn-group5"> 
-                                                        <button data-toggle="dropdown" class="btn dropdown-toggle">
-                                                                Enter Finish Point<span class="caret"></span> </button>
-                                                        <ul class="dropdown-menu">
-                                                                <li><input type="text" class="typeahead"></li>    
-                                                                <li><a class="hc" href="#">Boston</a></li>
-                                                                <li><a class="hc" href="#">Hull</a></li>
-                                                                <li><a class="hc" href="#">Hingham</a></li>
-                                                        </ul>
+                                        </br>
+                                        <div class="container-fluid">
+                                                <div class="col-xs-4 text-right">
+                                                        <div class= "finish"> Finish: </div>
+                                                </div>
+                                                <div class="col-xs-8 text-left">
+                                                        <div class="btn-group5"> 
+                                                                <button data-toggle="dropdown" class="btn dropdown-toggle">
+                                                                        Enter Finish Point<span class="caret"></span> </button>
+                                                                <ul class="dropdown-menu">
+                                                                        <li><input type="text" class="typeahead"></li>    
+                                                                        <li><a class="hc" href="#">Boston</a></li>
+                                                                        <li><a class="hc" href="#">Hull</a></li>
+                                                                        <li><a class="hc" href="#">Hingham</a></li>
+                                                                </ul>
+                                                        </div>
                                                 </div>
                                         </div>
-                                </div>
-                                </br>
-                                <div class="container">
-                                        <div class="col-sm-2">
-                                                <div class="buy_tix">
-                                        <a href="https://ticketing.bostonharborcruises.com/WebStore/shop/ViewItems.aspx?CG=EXCR&C=HIFFRR15FIH">
-                                                        <button type="button" class="btn btn-success btn-lg">Buy Tickets</button>
-                                                        </a>
+                                        </br>
+                                        <div class="container-fluid">
+                                                <div class="col-sm-6">
+                                                        <div class="buy_tix">
+                                                <a href="https://ticketing.bostonharborcruises.com/WebStore/shop/ViewItems.aspx?CG=EXCR&C=HIFFRR15FIH">
+                                                                <button type="button" class="btn btn-success btn-lg">Buy Tickets</button>
+                                                                </a>
+                                                        </div>
+                                                </div>
+                                                <div class="col-sm-6">
+                                                        <div class="print_schedule">
+                                                                <button type="button" class="btn btn-success btn-lg">Print Schedule</button>
+                                                        </div>
                                                 </div>
                                         </div>
-                                        <div class="col-sm-2">
-                                                <div class="print_schedule">
-                                                        <button type="button" class="btn btn-success btn-lg">Print Schedule</button>
-                                                </div>
-                                        </div>
-                                </div>
-                        </div> 
-                        <div id="map-container" class="container-fluid">
+                                </div> 
+                                <div id="map-container" class="container-fluid">
                                         <div id="map" class="col-xs-12 col-sm-8 col-md-8 col-lg-8 pull-right">
                                                 <p>map out your trip</p>
-                                                <script type="text/javascript">
+                                        <script type="text/javascript">
                                         var map;
                                         function initMap() {
                                                 var mapOptions =  {
@@ -183,14 +183,11 @@
                                                         }
                                                 map = new google.maps.Map(document.getElementById('map'), mapOptions);
                                         }
-                                                </script>
+                                         </script>
                                         </div>
                                 </div>
                         </div>
                 </div>
-            </div>
-            </div>
-            </div>
 
                 <script async defer
                         src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBOccCom-vEeFD7ox9GjEqawE_YSDww6vE&callback=initMap">
