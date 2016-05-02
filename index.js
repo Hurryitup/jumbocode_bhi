@@ -1,78 +1,64 @@
-$(function() {
-  //       $( "#datepicker" ).datepicker();
-  //       $("#datepicker").change(function () {
-  //           dates[num_islands] = $(this).datepicker("getDate");
-		// });
-        $('.datepick').each(function(){
-                $(this).datepicker();
-                $(this).change(function () {
-                        dates[num_islands] = $(this).datepicker("getDate");
-                });
-        });
+var express = require('express');
+var app = express();
+
+var bodyParser = require('body-parser');
+app.use(bodyParser.json()); // support json encoded bodies
+app.use(bodyParser.urlencoded({ extended: true })); // support encoded bodies
+
+var gtfs = require("gtfs");
+
+app.set('port', (process.env.PORT || 5000));
+app.use(express.static(__dirname + '/public'));
+
+// views is directory for all template files
+app.set('views', __dirname + '/views');
+app.set('view engine', 'ejs');
+
+var mongoUri = process.env.MONGOLAB_URI || process.env.MONGOHQ_URL || 'mongodb://heroku_n5jwt1d7:29u6v15133fq496t32k4la78er@ds021010.mlab.com:21010/heroku_n5jwt1d7';
+var MongoClient = require('mongodb').MongoClient, format = require('util').format;
+var db = MongoClient.connect(mongoUri, function(error, databaseConnection) {
+	db = databaseConnection;
 });
 
-var start;
-var finish;
-var stops = [];
-var dates = [];
-var time = [];
-var num_islands = 0;
-var currentDate;
-$(document).ready(function(){
-    $("#start_man").keyup(function (e) {
-        if (e.which == 13) {
-            start = $("#start_man").val();
-            document.getElementById("start_title").innerHTML = start;
-        }
+app.get('/getTimes', function(request, response) {
+	// var route = request.query.route;
+	gtfs.getStopTimes(function (something) {//ByStop("localAgency", "NPS_BOHA__R1", "NPS_BOHA__GEIS", 0, function(err, routes) {
+		// console.log(routes);
+		// console.log(err);
+		console.log(something);
 	});
-	$("#start_Boston").click(function(){ 
-		start = "Boston";
-		document.getElementById("start_title").innerHTML = start;
-	});
-	$("#start_Hull").click(function(){ 
-		start = "Hull";
-		document.getElementById("start_title").innerHTML = start;		 
-	});
-	$("#start_Hingham").click(function(){ 
-		start = "Hingham"; 
-		document.getElementById("start_title").innerHTML = start;
-	});
-	$("#Georges").click(function(){ 
-		stops[num_islands] = "Georges Island"; 
-		document.getElementById("island_title").innerHTML = "Georges";		
-	});
-	$("#Spectacle").click(function(){ 
-		stops[num_islands] = "Spectacle Island"; 
-		document.getElementById("island_title").innerHTML = "Spectacle";
-	});
-	$("#Peddocks").click(function(){ 
-		stops[num_islands] = "Peddocks";
-		document.getElementById("island_title").innerHTML = "Peddocks"; 
-	});
-	$("#1030").click(function(){ 
-		time[num_islands] = "10:30"; 
-		document.getElementById("time_title").innerHTML = time[num_islands];
-	});
-	$("#1200").click(function(){ 
-		time[num_islands] = "12:00"; 
-		document.getElementById("time_title").innerHTML = time[num_islands];		
-	});
-	$("#finish_man").keyup(function (e) {
-		if (e.which == 13) {
-    		finish = $("#finish_man").val();
-    		document.getElementById("finish_title").innerHTML = finish;
+});
+
+/*
+example input: curl "localhost:5000/getShapes?start=GEIS&end=PEPO&start=PEPO&end=GEIS"
+*/
+app.get('/getShapes', function(request, response) {
+	var starts = request.query.start;
+	var ends = request.query.end;
+
+	// gtfs.agencies(function(err, agencies) {
+		
+	// });	
+
+	// gtfs.getShapesByRoute("NPS_BOHA__BHIP", "NPS_BOHA__R1", "0", function(err, shapes) {
+	// 	console.log(shapes);
+	// });
+
+	db.collection('shapes', function(error, coll) {
+		var lastIndex = Math.min(starts.length, ends.length);
+		var mongoQuery = [];
+
+		for (var i = 0; i < lastIndex; i++) {
+			var searchTerm = starts[i] + "__" + ends[i];
+			mongoQuery.push({"shape_id": searchTerm});
 		}
-    });
-    $("#end_Boston").click(function(){ 
-    	finish = "Boston"; 
-    	document.getElementById("finish_title").innerHTML = finish;
-    });
-    $("#end_Hull").click(function(){ 
-    	finish = "Hull"; 
-    	document.getElementById("finish_title").innerHTML = finish;
-    });
-    $("#end_Hingham").click(function(){ 
-    	finish = "Hingham"; 
-    	document.getElementById("finish_title").innerHTML = finish;
-    });
+
+		coll.find({$or: mongoQuery}).toArray(function (error, cursor) {
+			response.send(cursor);
+		});
+	});
+});
+
+app.listen(app.get('port'), function() {
+	console.log("Node app is running at localhost:" + app.get('port'));
 });
