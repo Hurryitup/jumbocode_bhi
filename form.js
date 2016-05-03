@@ -45,11 +45,13 @@ function form_addElement() {
         var tripDiv = document.getElementById("trip")
 
         var container = document.createElement("div");
-        container.className = "container";
+        container.className = "container-fluid";
 
         // create island button
         var container1 = document.createElement("div");
-                container1.className = "col-xs-1 btn-group2";
+                container1.className = "col-xs-3";
+        var container1_5 = document.createElement("div");
+                container1_5.className = "btn-group2";
         var islandButton = document.createElement("button");
                 var dtoggle = document.createAttribute("data-toggle");
                 dtoggle.value = "dropdown";
@@ -73,7 +75,7 @@ function form_addElement() {
 
         // TODO: GET DATEPICKER TO WORK
         var container2 = document.createElement("div");
-                container2.className = "col-xs-2";
+                container2.className = "col-xs-6";
         var container2_5 = document.createElement("div");
                 container2_5.className = "btn-group3";
         var dEle = document.createElement("element");
@@ -93,7 +95,9 @@ function form_addElement() {
 
 
         var container3 = document.createElement("div");
-                container3.className = "col-xs-1 btn-group4";
+                container3.className = "col-xs-3";
+        var container3_5 = document.createElement("div");
+                container3_5.className = "btn-group4";
         var timeButton = document.createElement("button");
                 var dtoggle = document.createAttribute("data-toggle");
                 dtoggle.value = "dropdown";
