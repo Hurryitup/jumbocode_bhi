@@ -39,19 +39,8 @@ body {background-color: #f8f8ff !important; }
         height: 100%;
         width:  100%;
         display: inline;
-        border-radius: 10px;
-        border-color: black;
 }
-/*@media all and (min-width: 1200px) {
-  #map {
-    min-height: 500px;
-    width: 70%;
-    display: block;
-    position: relative;
-    margin-left: 0%;
-    margin-right: 0%;
-    float: right;
-  } */
+
   #map-container {
         padding-right: 0px;
 }
@@ -74,8 +63,6 @@ body {background-color: #f8f8ff !important; }
         height: 100%;
         width:  100%;
         display: inline;
-        border-radius: 10px;
-        border-color: black;
         float: left;
   }
 }
@@ -92,8 +79,6 @@ body {background-color: #f8f8ff !important; }
         height: 100%;
         width:  100%;
         display: inline;
-        border-radius: 10px;
-        border-color: black;
         float: left;
   }
 }
@@ -110,8 +95,6 @@ body {background-color: #f8f8ff !important; }
         height: 100%;
         width:  100%;
         display: inline;
-        border-radius: 10px;
-        border-color: black;
         float: left;
     }
 }
@@ -128,8 +111,6 @@ body {background-color: #f8f8ff !important; }
         height: 100%;
         width:  100%;
         display: inline;
-        border-radius: 10px;
-        border-color: black;
         float: left;
     }
 }
@@ -146,8 +127,6 @@ body {background-color: #f8f8ff !important; }
         height: 100%;
         width:  100%;
         display: inline;
-        border-radius: 10px;
-        border-color: black;
         float: left;
     }
 }
@@ -164,23 +143,10 @@ body {background-color: #f8f8ff !important; }
         height: 100%;
         width:  100%;
         display: inline;
-        border-radius: 10px;
-        border-color: black;
         float: left;
     }
 }
-/*
-@media all and (max-width: 700px) {
-  #map {
-        min-height: 100%;
-        width:96%;
-        margin-left: 2%;
-        margin-right: 2%;
-        margin-top: 375px;
-        float: right;
-  }
-}
-*/
+
 @media all and (min-width: 0px) {
   .dropdown-toggle{
       background-color: #84c7c6;
@@ -307,22 +273,7 @@ body {background-color: #f8f8ff !important; }
     font-family: monospace;
     font-size: 150%;
   }
- /* .btn-success {
-    color: #ffffff;
-    background: #ED1C24;
-    } */
-
-  #buy {
-    margin-left: auto;
-    margin-top: auto;
-    font-family: 'Open Sans';
-    border-radius: 5px;
-    border-color: black;
-    color: #ffffff;
-    }
-  #buy {
-    color: #84c7c6 !important; 
-    }
+ 
   a:link{
     color: white;
   }
@@ -331,9 +282,6 @@ body {background-color: #f8f8ff !important; }
     color: black;
   }
 
-  #print {
-    color: #ffffff;
-    margin-left: auto;
-    margin-top: auto;
-    font-family: 'Open Sans';
-    }
+  .print_schedule {
+   padding-bottom: 20px;
+  }
