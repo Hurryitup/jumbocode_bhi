@@ -8,7 +8,9 @@ app.use(bodyParser.urlencoded({ extended: true })); // support encoded bodies
 var gtfs = require("gtfs");
 
 app.set('port', (process.env.PORT || 5000));
-app.use(express.static(__dirname + '/public'));
+// app.use(express.static(__dirname + '/public'));
+app.use('/', express.static(__dirname + '/'));
+
 
 // views is directory for all template files
 app.set('views', __dirname + '/views');
@@ -35,15 +37,6 @@ example input: curl "localhost:5000/getShapes?start=GEIS&end=PEPO&start=PEPO&end
 app.get('/getShapes', function(request, response) {
 	var starts = request.query.start;
 	var ends = request.query.end;
-
-	// gtfs.agencies(function(err, agencies) {
-		
-	// });	
-
-	// gtfs.getShapesByRoute("NPS_BOHA__BHIP", "NPS_BOHA__R1", "0", function(err, shapes) {
-	// 	console.log(shapes);
-	// });
-
 	db.collection('shapes', function(error, coll) {
 		var lastIndex = Math.min(starts.length, ends.length);
 		var mongoQuery = [];
