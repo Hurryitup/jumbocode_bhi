@@ -172,7 +172,6 @@ body {background-color: #f8f8ff !important; }
     font-weight: bold;
   }
   }
-
   .btn-group1 {
     color: white;
     margin-left: auto;
@@ -231,6 +230,7 @@ body {background-color: #f8f8ff !important; }
     color: #84c7c6;
     margin-top: auto;
     margin-left: auto;
+    margin-right: auto;
     font-family: 'Open Sans';
     width: 160px; 
     padding: 4px;
@@ -252,9 +252,13 @@ body {background-color: #f8f8ff !important; }
   }
 
   .btn-group4 {
+    margin-top: auto;
+    margin-left: auto;
+    margin-right: auto;
     color: white;
     font-family: 'Open Sans';
-    width: 2px;
+    /*width: 2px;*/
+    width: 160px; 
   }
 
   .btn-group5 {
@@ -266,12 +270,25 @@ body {background-color: #f8f8ff !important; }
   }
 
   .add_dest {
+    display: inline-block;
     color: white;
     margin-top: auto;
     margin-left: auto;
     /*font-family: 'Open Sans'; */
     font-family: monospace;
     font-size: 150%;
+    margin-right: 0px;
+  }
+
+  .rem_dest{
+    display: inline;
+    color: white;
+    margin-top: auto;
+    margin-left: auto;
+    /*font-family: 'Open Sans'; */
+    font-family: monospace;
+    font-size: 150%;
+    margin-left: 0px;
   }
  
   a:link{

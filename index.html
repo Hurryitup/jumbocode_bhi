@@ -24,22 +24,68 @@
                   <link rel="stylesheet" href="http://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
                  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
                  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.9/jquery-ui.js"></script>
-                 <link rel="stylesheet" type="text/css" href="default_style.css">
-                  <script>
-                  // $(function() {
-                  //   // $( "#datepicker" ).datepicker();
-                  //   // $('.datepick').each(function(){
-                  //   //     $(this).datepicker();
-                  //   // });
+                  <!-- <link rel="stylesheet" href="http://resources/demos/style.css"> -->
+                  <script type="text/javascript" src="index.js">
 
-                  //   // $('body').on('focus',".datepick", function(){
-
-                  //   //     if( $(this).hasClass('hasDatepicker') === false )  {
-                  //   //         $(this).datepicker();
-                  //   //     }
-                  //   // });
-                  // });
                   </script>
+        </head>
+        <body>
+                <img src="boat.png" alt="Boat Glif" style="width:60px;height:60px;">
+                <div class="title"> My itinerary </div>
+                <div class= "start"> Start: </div>
+                <div class="btn-group1"> 
+                        <button id="start_title" data-toggle="dropdown" class="btn dropdown-toggle">Enter Starting Point<span class="caret"></span> </button>
+                        <ul class="dropdown-menu">
+                                <li><input type="text" id="start_man" class="typeahead"></li>    
+                                <li><a class="hc" id="start_Boston">Boston</a></li>
+                                <li><a class="hc" id="start_Hull">Hull</a></li>
+                                <li><a class="hc" id="start_Hingham">Hingham</a></li>
+                        </ul>
+                </div>
+
+                <div class= "rem_dest">
+                    <button type="button" class="btn btn-default">-</button>
+                </div>
+
+                <div class="plan_trip"> Plan Your Trip </div>
+                <div class="btn-group2"> 
+                        <button id="island_title" data-toggle="dropdown" class="btn dropdown-toggle">Island<span class="caret"></span> </button>
+                        <ul class="dropdown-menu">    
+                                <li><a class="hc" id ="Georges">Georges Island</a></li>
+                                <li><a class="hc" id="Spectacle">Spectacle Island</a></li>
+                                <li><a class="hc" id="Peddocks">Peddocks Island</a></li>
+                        </ul>
+                </div>
+
+                <div class="btn-group3"> 
+                        <element id = "date"> Date: </element> 
+                        <input type="text" id="datepicker">
+                </div>
+
+                <div class="btn-group4"> 
+                        <button id="time_title" data-toggle="dropdown" class="btn dropdown-toggle">Time<span class="caret"></span> </button>
+                        <ul class="dropdown-menu">
+                                <!-- maybe have choices for every 15 minutes and only enable
+                                the ones that apply to selected island -->
+                                <li><a class="hc" id="1030">10:30</a></li>
+                                <li><a class="hc" id="1200">12:30</a></li>
+                        </ul>
+                </div>
+
+                <div class="add_dest">
+                    <button type="button" class="btn btn-default">+</button>
+                </div> 
+
+                <div class= "finish"> Finish: </div>
+                <div class="btn-group5"> 
+                        <button id="finish_title" data-toggle="dropdown" class="btn dropdown-toggle">Enter Finish Point<span class="caret"></span> </button>
+                        <ul class="dropdown-menu">
+                                <li><input type="text" id="finish_man" class="typeahead"></li>    
+                                <li><a class="hc" id="end_Boston">Boston</a></li>
+                                <li><a class="hc" id="end_Hull">Hull</a></li>
+                                <li><a class="hc" id="end_Hingham">Hingham</a></li>
+                        </ul>
+                </div>
 
                   <script type="text/javascript" src="form.js"></script>
         </head>
@@ -190,6 +236,7 @@
                                 </div>
                         </div>
                 </div>
+                <div id="placeholder"></div>
 
                 <script async defer
                         src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBOccCom-vEeFD7ox9GjEqawE_YSDww6vE&callback=initMap">
