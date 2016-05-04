@@ -45,11 +45,13 @@ function form_addElement() {
         var tripDiv = document.getElementById("trip")
 
         var container = document.createElement("div");
-        container.className = "container";
+        container.className = "container-fluid";
 
         // create island button
         var container1 = document.createElement("div");
-                container1.className = "col-xs-1 btn-group2";
+                container1.className = "col-xs-3";
+        var container1_5 = document.createElement("div");
+                container1_5.className = "btn-group2";
         var islandButton = document.createElement("button");
                 var dtoggle = document.createAttribute("data-toggle");
                 dtoggle.value = "dropdown";
@@ -60,13 +62,13 @@ function form_addElement() {
         var isList = document.createElement("ul");
                 isList.className="dropdown-menu";
         var litem0 = document.createElement("li");
-                litem0.innerHTML="<a class='hc' href='#'>Georges Island</a>";
+                litem0.innerHTML="<a class='hc' id='Georges' href='#'>Georges Island</a>";
                 isList.appendChild(litem0);
         var litem1 = document.createElement("li");
-                litem1.innerHTML="<a class='hc' href='#'>Spectacle Island</a>";
+                litem1.innerHTML="<a class='hc' id='Spectacle' href='#'>Spectacle Island</a>";
                 isList.appendChild(litem1);
         var litem2 = document.createElement("li");
-                litem2.innerHTML="<a class='hc' href='#'>Peddocks Island</a>";
+                litem2.innerHTML="<a class='hc' id='Peddocks' href='#'>Peddocks Island</a>";
                 isList.appendChild(litem2);
         container1.appendChild(isList);
 
@@ -83,7 +85,7 @@ function form_addElement() {
         var dPicker = document.createElement("input");
                 dPicker.type = "text";
                 // dPicker.name = "inputDate" + datepickcount;
-                dPicker.id = "datepicker";
+                // dPicker.id = "datepicker";
                 dPicker.className = "datepick myDate";
                 container2_5.appendChild(dPicker);
                 container2.appendChild(container2_5);
@@ -93,7 +95,9 @@ function form_addElement() {
 
 
         var container3 = document.createElement("div");
-                container3.className = "col-xs-1 btn-group4";
+                container3.className = "col-xs-3";
+        var container3_5 = document.createElement("div");
+                container3_5.className = "btn-group4";
         var timeButton = document.createElement("button");
                 var dtoggle = document.createAttribute("data-toggle");
                 dtoggle.value = "dropdown";
@@ -104,10 +108,10 @@ function form_addElement() {
         var tiList = document.createElement("ul");
                 tiList.className="dropdown-menu";
         var litem0 = document.createElement("li");
-                litem0.innerHTML="<a class='hc' href='#'>10:30</a>";
+                litem0.innerHTML="<a class='hc' id='1030' href='#'>10:30</a>";
                 tiList.appendChild(litem0);
         var litem1 = document.createElement("li");
-                litem1.innerHTML="<a class='hc' href='#'>12:30</a>";
+                litem1.innerHTML="<a class='hc' id='1230' href='#'>12:30</a>";
                 tiList.appendChild(litem1);
         container3.appendChild(tiList);
 
@@ -131,13 +135,17 @@ function form_addElement() {
         // newLine.appendChild(btng2);
         // tripDiv.appendChild(container);
         tripDiv.appendChild(container);
-        tripDiv.innerHTML += "<br/ >"
+        tripDiv.appendChild(document.createElement("br"));
+        // tripDiv.innerHTML += "<br/ >"
         // $($dPicker).datepicker();
 
         // $(".datepick").each(function () {
         //         $(this).datepicker();
         //         alert(this.id);
         // });
+        $(".datepick").each(function () {
+                $(this).datepicker();
+        });
 
 
 
@@ -151,4 +159,15 @@ function form_addElement() {
 //       }
 //   });
 
+}
+
+
+function form_remElement() {
+  // $('#trip:last-child', this).remove();
+  var trip = document.getElementById("trip");
+  var list = trip.childNodes;
+  if (list.length > 1) {
+    trip.removeChild(list[list.length - 1]);
+    trip.removeChild(list[list.length - 1]);
+  }
 }
