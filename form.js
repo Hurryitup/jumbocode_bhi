@@ -75,7 +75,7 @@ function form_addElement() {
 
         // TODO: GET DATEPICKER TO WORK
         var container2 = document.createElement("div");
-                container2.className = "col-xs-2";
+                container2.className = "col-xs-6";
         var container2_5 = document.createElement("div");
                 container2_5.className = "btn-group3";
         var dEle = document.createElement("element");
@@ -160,7 +160,6 @@ function form_addElement() {
 //   });
 
 }
-
 
 function form_remElement() {
   // $('#trip:last-child', this).remove();
