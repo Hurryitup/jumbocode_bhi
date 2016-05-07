@@ -6,6 +6,7 @@ function process_shapes(st, fin, stops) {
     }
     if (st == null || stops.length == 0) {
       alert("Looks like you are missing some stops!");
+      finish = null;
       return;
     } else {
       getShape(st, stops[0]);
