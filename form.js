@@ -40,8 +40,10 @@ $(document).ready(function() {
  
 });
 
+var stop_counter = 0;
 function form_addElement() {
         // alert('a');
+
         var tripDiv = document.getElementById("trip")
 
         var container = document.createElement("div");
@@ -57,21 +59,21 @@ function form_addElement() {
                 dtoggle.value = "dropdown";
                 islandButton.setAttributeNode(dtoggle);
                 islandButton.className = "btn dropdown-toggle";
+                islandButton.id = "island" + stop_counter.toString();
                 islandButton.innerHTML = "Island<span class='caret'></span>";
         container1.appendChild(islandButton);
         var isList = document.createElement("ul");
                 isList.className="dropdown-menu";
         var litem0 = document.createElement("li");
-                litem0.innerHTML="<a class='hc' id='Georges' href='#'>Georges Island</a>";
+                litem0.innerHTML="<a class='hc' id='Georges' data-value='"+ stop_counter +"' href='#'>Georges Island</a>";
                 isList.appendChild(litem0);
         var litem1 = document.createElement("li");
-                litem1.innerHTML="<a class='hc' id='Spectacle' href='#'>Spectacle Island</a>";
+                litem1.innerHTML="<a class='hc' id='Spectacle' data-value='"+ stop_counter +"' href='#'>Spectacle Island</a>";
                 isList.appendChild(litem1);
         var litem2 = document.createElement("li");
-                litem2.innerHTML="<a class='hc' id='Peddocks' href='#'>Peddocks Island</a>";
+                litem2.innerHTML="<a class='hc' id='Peddocks' data-value='"+ stop_counter +"' href='#'>Peddocks Island</a>";
                 isList.appendChild(litem2);
         container1.appendChild(isList);
-
 
         // TODO: GET DATEPICKER TO WORK
         var container2 = document.createElement("div");
@@ -103,15 +105,16 @@ function form_addElement() {
                 dtoggle.value = "dropdown";
                 timeButton.setAttributeNode(dtoggle);
                 timeButton.className = "btn dropdown-toggle";
+                timeButton.id = "time" + stop_counter.toString();
                 timeButton.innerHTML = "Time<span class='caret'></span>";
                 container3.appendChild(timeButton);
         var tiList = document.createElement("ul");
                 tiList.className="dropdown-menu";
         var litem0 = document.createElement("li");
-                litem0.innerHTML="<a class='hc' id='1030' href='#'>10:30</a>";
+                litem0.innerHTML="<a class='hc' id='1030' data-value='"+ stop_counter +"' href='#'>10:30</a>";
                 tiList.appendChild(litem0);
         var litem1 = document.createElement("li");
-                litem1.innerHTML="<a class='hc' id='1230' href='#'>12:30</a>";
+                litem1.innerHTML="<a class='hc' id='1230' data-value='"+ stop_counter +"' href='#'>12:30</a>";
                 tiList.appendChild(litem1);
         container3.appendChild(tiList);
 
@@ -147,8 +150,6 @@ function form_addElement() {
                 $(this).datepicker();
         });
 
-
-
 // $(".datepick").on('focus', function(){
 //         alert('a');
 //       var $this = $(this);
@@ -158,7 +159,8 @@ function form_addElement() {
 //        $this.datepicker("show");
 //       }
 //   });
-
+    
+      stop_counter++;
 }
 
 function form_remElement() {
