@@ -52,10 +52,10 @@ $(document).ready(function(){
         time[stop_no] = curr_time;
         $(document.body).find(parent_id).html(curr_time);
     });
-    $(document.body).on("click","#1200", function(){
+    $(document.body).on("click","#1230", function(){
         var stop_no = $(this).data("value");
         var parent_id = "#time" + stop_no;
-        curr_time = "12:00"
+        curr_time = "12:30"
         time[stop_no] = curr_time;
         $(document.body).find(parent_id).html(curr_time);    
     });

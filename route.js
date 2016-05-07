@@ -7,13 +7,17 @@ function process_shapes(st, fin, stops) {
     if (st == null || stops.length == 0) {
       alert("Looks like you are missing some stops!");
       return;
-    }
-    getShape(st, stops[0]);
-    for(var i = 0; i < stops.length - 1; i++) {
-      getShape(stops[i], stops[i+1])
-    }
-    if (fin != null) {
-      getShape(stops[stops.length - 1], fin);
+    } else {
+      getShape(st, stops[0]);
+      for(var i = 0; i < stops.length - 1; i++) {
+        if (stops[i] == undefined || stops[i+1] == undefined) {
+          alert("Looks like you are missing some stops!");
+        }
+        getShape(stops[i], stops[i+1]);
+      }
+      if (fin != null) {
+        getShape(stops[stops.length - 1], fin);
+      }
     }
 }
 
