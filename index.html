@@ -17,15 +17,20 @@
 
                 <link href="http://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" type="text/css">
 
-        <!-- NOT WORKING WITH LIAM's DATEPICKER CODE -->
-              <script type="text/javascript" src="button_handling.js" ></script>
                 <meta name="viewport" content="width=device-width, initial-scale=1">
                 <meta charset="utf-8">
                   <link rel="stylesheet" href="http://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
-                 <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
-                 <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.9/jquery-ui.js"></script>
+                <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+                <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.9/jquery-ui.js"></script>
                  <link rel="stylesheet" type="text/css" href="default_style.css">
+                 <script type="text/javascript" src="map.js"></script>
+                 <script async defer
+                        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBOccCom-vEeFD7ox9GjEqawE_YSDww6vE&callback=initMap">
+                </script>
                  <script type="text/javascript" src="route.js"></script>
+                 <script type="text/javascript" src="form.js"></script>
+                 <script type="text/javascript" src="button_handling.js" ></script>
+                 
                   <script>
                   // $(function() {
                   //   // $( "#datepicker" ).datepicker();
@@ -40,7 +45,7 @@
                   // });
                   </script>
 
-                  <script type="text/javascript" src="form.js"></script>
+                  
         </head>
         <body>
                 <div class="container-fluid">
@@ -163,41 +168,9 @@
                                         <!--<div id="map-container" class="container-fluid">-->
                                         <div id="map" class="col-xs-12 col-sm-8 col-md-8 col-lg-8">
                                                 <p>map out your trip</p>
-                                        <script type="text/javascript">
-                                        var map;
-                                        function initMap() {
-                                                var mapOptions =  {
-                                                                zoom: 11,
-                                                                center: {lat: 42.3117, lng: -70.9864},
-                                                                mapTypeControl: true,
-                                                                mapTypeControlOptions: {
-                                                                        style: google.maps.MapTypeControlStyle.HORIZONTAL_BAR,
-                                                                        position: google.maps.ControlPosition.TOP_CENTER
-                                                                },
-                                                                zoomControl: true,
-                                                                zoomControlOptions: {
-                                                                        position: google.maps.ControlPosition.LEFT_CENTER
-                                                                },
-                                                                scaleControl: true,
-                                                                streetViewControl: true,
-                                                                streetViewControlOptions: {
-                                                                        position: google.maps.ControlPosition.LEFT_TOP
-                                                                },
-                                                                fullscreenControl: true
-                                                        }
-                                                map = new google.maps.Map(document.getElementById('map'), mapOptions);
-                                                getShape(map);
-                                            }
-                                         </script>
                                         </div>
                                 </div>
                         </div>
                 </div>
-
-                <script async defer
-                        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBOccCom-vEeFD7ox9GjEqawE_YSDww6vE&callback=initMap">
-                </script>
-
-
         </body>
 </html>

@@ -1,21 +1,43 @@
-function getShape(map) {
-    start = "LOWH";
-    end = "GEIS";
-    var arr = [];
-    var http = new XMLHttpRequest();
-    var url = "http://vast-anchorage-34434.herokuapp.com/getShapes?starts=" + start + "&ends=" + end;
-    http.open("GET", url, true);
-    http.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-    http.onreadystatechange = function() {
-        if (http.readyState == 4 && http.status == 200) {
-          arr = JSON.parse(http.responseText);
-          getPath(arr, map);
+var boatPath = null;
+
+function process_shapes(st, fin, stops) {
+    if (boatPath != null) {
+      boatPath.setMap(null);
+    }
+    if (st == null || stops.length == 0) {
+      alert("Looks like you are missing some stops!");
+      finish = null;
+      return;
+    } else {
+      getShape(st, stops[0]);
+      for(var i = 0; i < stops.length - 1; i++) {
+        if (stops[i] == undefined || stops[i+1] == undefined) {
+          alert("Looks like you are missing some stops!");
         }
-    };
-    http.send(null);
+        getShape(stops[i], stops[i+1]);
+      }
+      if (fin != null) {
+        getShape(stops[stops.length - 1], fin);
+      }
+    }
 }
 
-function getPath(routeArr, map) {
+function getShape(st, fin) {
+      var arr = [];
+      var http = new XMLHttpRequest();
+      var url = "http://vast-anchorage-34434.herokuapp.com/getShapes?starts=" + st + "&ends=" + fin;
+      http.open("GET", url, true);
+      http.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+      http.onreadystatechange = function() {
+          if (http.readyState == 4 && http.status == 200) {
+            arr = JSON.parse(http.responseText);
+            getPath(arr, map);
+          }
+      };
+      http.send(null);
+}
+
+function getPath(routeArr) {
     routeArr.sort(compare);
     var pathArr = [];
     for (var i = 0; i < routeArr.length; i++) {
@@ -28,15 +50,16 @@ function getPath(routeArr, map) {
     renderShape(pathArr, map);
 }
 
-function renderShape(boatPathCoords, map) {
-    var boatPath = new google.maps.Polyline({
+function renderShape(boatPathCoords) {
+    
+    boatPath = new google.maps.Polyline({
         path: boatPathCoords,
         geodesic: true,
         strokeColor: '#FF0000',
         strokeOpacity: 1.0,
         strokeWeight: 2
     });
-    boatPath.setMap(map)
+    boatPath.setMap(map);
 }
 
 function compare(a, b) {

@@ -1,72 +1,77 @@
 $(function() {
-        $( "#datepicker" ).datepicker();
-        $("#datepicker").change(function () {
-            dates[num_islands] = $(this).datepicker("getDate");
-                });
+    $( "#datepicker" ).datepicker();
+    $("#datepicker").change(function () {
+        dates[num_islands] = $(this).datepicker("getDate");
+    });
 });
 
-var start;
-var finish;
+var start = null;
+var finish = null;
 var stops = [];
 var dates = [];
 var time = [];
-var num_islands = 0;
 var currentDate;
 $(document).ready(function(){
-    $("#start_man").keyup(function (e) {
-        if (e.which == 13) {
-            start = $("#start_man").val();
-            document.getElementById("start_title").innerHTML = start;
-        }
-        });
-        $("#start_Boston").click(function(){ 
-                start = "Boston";
-                document.getElementById("start_title").innerHTML = start;
-        });
-        $("#start_Hull").click(function(){ 
-                start = "Hull";
-                document.getElementById("start_title").innerHTML = start;                
-        });
-        $("#start_Hingham").click(function(){ 
-                start = "Hingham"; 
-                document.getElementById("start_title").innerHTML = start;
-        });
-        $("#Georges").click(function(){ 
-                stops[num_islands] = "Georges Island"; 
-                document.getElementById("island_title").innerHTML = "Georges";          
-        });
-        $("#Spectacle").click(function(){ 
-                stops[num_islands] = "Spectacle Island"; 
-                document.getElementById("island_title").innerHTML = "Spectacle";
-        });
-        $("#Peddocks").click(function(){ 
-                stops[num_islands] = "Peddocks";
-                document.getElementById("island_title").innerHTML = "Peddocks"; 
-        });
-        $("#1030").click(function(){ 
-                time[num_islands] = "10:30"; 
-                document.getElementById("time_title").innerHTML = time[num_islands];
-        });
-        $("#1200").click(function(){ 
-                time[num_islands] = "12:00"; 
-                document.getElementById("time_title").innerHTML = time[num_islands];            
-        });
-        $("#finish_man").keyup(function (e) {
-                if (e.which == 13) {
-                finish = $("#finish_man").val();
-                document.getElementById("finish_title").innerHTML = finish;
-                }
+    $("#start_Boston").click(function(){ 
+        start = "LOWH";
+        document.getElementById("start_title").innerHTML = "Boston";
+    });
+    $("#start_Hull").click(function(){ 
+        start = "PEPO";
+        document.getElementById("start_title").innerHTML = "Hull";         
+    });
+    $("#start_Hingham").click(function(){ 
+        start = "HECO"; 
+        document.getElementById("start_title").innerHTML = "Hingham";
+    });
+    $(document.body).on("click","#Georges", function(){ 
+        var stop_no = $(this).data("value");
+        var parent_id = "#island" + stop_no;
+        stops[stop_no] = "GEIS";
+        $(document.body).find(parent_id).html("Georges");
+        process_shapes(start, finish, stops);    
+    });
+    $(document.body).on("click","#Spectacle", function(){
+        var stop_no = $(this).data("value");
+        var parent_id = "#island" + stop_no;
+        stops[stop_no] = "SPIS";
+        $(document.body).find(parent_id).html("Spectacle");
+        process_shapes(start, finish, stops); 
+    });
+    $(document.body).on("click","#Peddocks", function(){
+        var stop_no = $(this).data("value");
+        var parent_id = "#island" + stop_no;
+        stops[stop_no] = "PEIS";
+        $(document.body).find(parent_id).html("Peddocks");
+        process_shapes(start, finish, stops); 
+    });
+    $(document.body).on("click","#1030", function(){
+        var stop_no = $(this).data("value");
+        var parent_id = "#time" + stop_no;
+        curr_time = "10:30"
+        time[stop_no] = curr_time;
+        $(document.body).find(parent_id).html(curr_time);
+    });
+    $(document.body).on("click","#1230", function(){
+        var stop_no = $(this).data("value");
+        var parent_id = "#time" + stop_no;
+        curr_time = "12:30"
+        time[stop_no] = curr_time;
+        $(document.body).find(parent_id).html(curr_time);    
     });
     $("#end_Boston").click(function(){ 
-        finish = "Boston"; 
-        document.getElementById("finish_title").innerHTML = finish;
+        finish = "LOWH"; 
+        document.getElementById("finish_title").innerHTML = "Boston";
+        process_shapes(start, finish, stops); 
     });
     $("#end_Hull").click(function(){ 
-        finish = "Hull"; 
-        document.getElementById("finish_title").innerHTML = finish;
+        finish = "PEPO"; 
+        document.getElementById("finish_title").innerHTML = "Hull";
+        process_shapes(start, finish, stops); 
     });
     $("#end_Hingham").click(function(){ 
-        finish = "Hingham"; 
-        document.getElementById("finish_title").innerHTML = finish;
+        finish = "HECO"; 
+        document.getElementById("finish_title").innerHTML = "Hingham";
+        process_shapes(start, finish, stops); 
     });
 });
